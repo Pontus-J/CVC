@@ -1,0 +1,174 @@
+table Annual_Budget
+	lineageTag: 069be5c9-6f13-4a1e-894c-a63b3fb5e151
+
+	column CompanyID
+		dataType: string
+		lineageTag: afa29bec-4aa1-4a1f-8b50-498d33b6984c
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 9817b1a6-60f9-423c-b7e6-925ddb1dd4c0
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: 59615c52-3308-432e-9642-40a211511733
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue_Budget
+		dataType: double
+		lineageTag: 82a70e5f-642e-4b8b-8ff1-b7d39ed9caff
+		summarizeBy: sum
+		sourceColumn: Revenue_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COGS_Budget
+		dataType: double
+		lineageTag: eaf48607-c9ee-43cc-945f-093c4f18448f
+		summarizeBy: sum
+		sourceColumn: COGS_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GrossProfit_Budget
+		dataType: double
+		lineageTag: df195d03-49ee-4e41-b3cc-fc69ca911209
+		summarizeBy: sum
+		sourceColumn: GrossProfit_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBITDA_Budget
+		dataType: double
+		lineageTag: 627ecc90-76d8-4834-a778-32d944a35514
+		summarizeBy: sum
+		sourceColumn: EBITDA_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Depreciation_Budget
+		dataType: double
+		lineageTag: 890522e8-b164-41ff-9a7c-4600da82e42e
+		summarizeBy: sum
+		sourceColumn: Depreciation_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Amortization_Budget
+		dataType: double
+		lineageTag: 54cd2af2-e0b2-46c4-83e5-697cd2ad4c1a
+		summarizeBy: sum
+		sourceColumn: Amortization_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBITA_Budget
+		dataType: double
+		lineageTag: 11a4628d-e256-43b0-af72-4c94e8d60a45
+		summarizeBy: sum
+		sourceColumn: EBITA_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBIT_Budget
+		dataType: double
+		lineageTag: f7ad2cd6-b593-4292-8988-0d37cbc3eacf
+		summarizeBy: sum
+		sourceColumn: EBIT_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetIncome_Budget
+		dataType: double
+		lineageTag: 38a57007-fa8f-41d5-9e58-bf4700e69837
+		summarizeBy: sum
+		sourceColumn: NetIncome_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CashFromOps_Budget
+		dataType: double
+		lineageTag: 1df9848b-0811-4ca1-bf00-fd3010cb72cd
+		summarizeBy: sum
+		sourceColumn: CashFromOps_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Capex_Budget
+		dataType: double
+		lineageTag: 2b7c44ad-b762-4403-88ab-0eb8bcd8f5a2
+		summarizeBy: sum
+		sourceColumn: Capex_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WorkingCapital_Budget
+		dataType: double
+		lineageTag: e6d53690-d897-4a2e-b022-984443824539
+		summarizeBy: sum
+		sourceColumn: WorkingCapital_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetDebt_Budget
+		dataType: double
+		lineageTag: 97739ee6-7560-46cd-abb5-a53c8582e249
+		summarizeBy: sum
+		sourceColumn: NetDebt_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Annual_Budget = m
+		mode: import
+		queryGroup: 'Excel Datasource'
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\pontus.johansson\Downloads\portfolio_monitoring_case_data.xlsx"), null, true),
+				    Annual_Budget_Sheet = Source{[Item="Annual_Budget",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Annual_Budget_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CompanyID", type text}, {"FiscalYear", Int64.Type}, {"Currency", type text}, {"Revenue_Budget", type number}, {"COGS_Budget", type number}, {"GrossProfit_Budget", type number}, {"EBITDA_Budget", type number}, {"Depreciation_Budget", type number}, {"Amortization_Budget", type number}, {"EBITA_Budget", type number}, {"EBIT_Budget", type number}, {"NetIncome_Budget", type number}, {"CashFromOps_Budget", type number}, {"Capex_Budget", type number}, {"WorkingCapital_Budget", type number}, {"NetDebt_Budget", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

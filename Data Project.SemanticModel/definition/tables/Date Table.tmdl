@@ -1,0 +1,205 @@
+table 'Date Table'
+	lineageTag: f46027b4-2125-4b5a-bcf1-fb836757ee91
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 428fb0b3-c124-4c8d-b0bc-519a1b486723
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 84702fc4-8b98-46dd-ba23-0194ecae2b56
+			defaultHierarchy: LocalDateTable_a3e0d1af-eb85-43da-b306-07b23c3dd128.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: a894c022-4b0e-4a8a-aeac-13f8a08d3f8b
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b070f7c-4e80-463d-b609-a23752afc3b1
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: 00bf985e-33c8-4142-acfc-ed47e72f950a
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNameShort
+		dataType: string
+		lineageTag: 009a53db-66b8-4eb5-ab9e-f81d305d2a52
+		summarizeBy: none
+		sourceColumn: MonthNameShort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: fbbd0ab1-3960-4ac8-8c0a-6f8e78f52ec3
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: de6cbc2d-2c84-473a-b998-8b31b0cede77
+		summarizeBy: sum
+		sourceColumn: YearMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthText
+		dataType: string
+		lineageTag: 6532bdf2-d49d-4bcc-b5c3-0a3ef33be066
+		summarizeBy: none
+		sourceColumn: YearMonthText
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: dea4cb24-8ab9-4dab-9c32-40fb0750764d
+		summarizeBy: sum
+		sourceColumn: DayOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		dataType: string
+		lineageTag: c9234d31-533b-4d09-81d9-2e64cf76b59d
+		summarizeBy: none
+		sourceColumn: DayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWeekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8ef8dfe6-f5af-4c90-a841-4cf9669aa262
+		summarizeBy: none
+		sourceColumn: IsWeekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 62b31680-6a25-4454-9ba6-13f5bddca29c
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 856a2d2a-38b4-44a2-a809-af2b3b618983
+		summarizeBy: sum
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCurrentMonth
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 034fd577-3e07-4dc6-98ff-a29ece514b49
+		summarizeBy: none
+		sourceColumn: IsCurrentMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCurrentYear
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a462d8d9-d9a1-478e-9b67-aff133e460ff
+		summarizeBy: none
+		sourceColumn: IsCurrentYear
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Date Table' = m
+		mode: import
+		queryGroup: 'New Tables'
+		source = ```
+				let
+				    // Define date range - covers data period (2023-2024) with some buffer
+				    StartDate = #date(2023, 1, 1),
+				    EndDate = #date(2024, 12, 31),
+				    
+				    // Generate list of dates
+				    DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+				    
+				    // Convert to table and add columns
+				    DateTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}),
+				    
+				    // Add date dimension columns
+				    AddYear = Table.AddColumn(DateTable, "Year", each Date.Year([Date]), Int64.Type),
+				    AddMonth = Table.AddColumn(AddYear, "Month", each Date.Month([Date]), Int64.Type),
+				    AddMonthName = Table.AddColumn(AddMonth, "MonthName", each Date.MonthName([Date]), type text),
+				    AddMonthNameShort = Table.AddColumn(AddMonthName, "MonthNameShort", each Date.ToText([Date], "MMM"), type text),
+				    AddQuarter = Table.AddColumn(AddMonthNameShort, "Quarter", each Date.QuarterOfYear([Date]), Int64.Type),
+				    AddYearMonth = Table.AddColumn(AddQuarter, "YearMonth", each [Year] * 100 + [Month], Int64.Type),
+				    AddYearMonthText = Table.AddColumn(AddYearMonth, "YearMonthText", each Date.ToText([Date], "yyyy-MM"), type text),
+				    AddDayOfWeek = Table.AddColumn(AddYearMonthText, "DayOfWeek", each Date.DayOfWeek([Date], Day.Monday) + 1, Int64.Type),
+				    AddDayName = Table.AddColumn(AddDayOfWeek, "DayName", each Date.DayOfWeekName([Date]), type text),
+				    AddIsWeekend = Table.AddColumn(AddDayName, "IsWeekend", each [DayOfWeek] >= 6, type logical),
+				    
+				    // Add fiscal period helpers (assuming calendar year = fiscal year)
+				    AddFiscalYear = Table.AddColumn(AddIsWeekend, "FiscalYear", each [Year], Int64.Type),
+				    AddFiscalQuarter = Table.AddColumn(AddFiscalYear, "FiscalQuarter", each [Quarter], Int64.Type),
+				    
+				    // Add relative period flags (useful for LTM, YTD calculations)
+				    AddIsCurrentMonth = Table.AddColumn(AddFiscalQuarter, "IsCurrentMonth", each [YearMonth] = Date.Year(DateTime.LocalNow()) * 100 + Date.Month(DateTime.LocalNow()), type logical),
+				    AddIsCurrentYear = Table.AddColumn(AddIsCurrentMonth, "IsCurrentYear", each [Year] = Date.Year(DateTime.LocalNow()), type logical),
+				    
+				    // Sort by date and set data types
+				    SortedTable = Table.Sort(AddIsCurrentYear, {{"Date", Order.Ascending}}),
+				    
+				    // Set explicit data types
+				    FinalTable = Table.TransformColumnTypes(SortedTable, {
+				        {"Date", type date},
+				        {"Year", Int64.Type},
+				        {"Month", Int64.Type},
+				        {"MonthName", type text},
+				        {"MonthNameShort", type text},
+				        {"Quarter", Int64.Type},
+				        {"YearMonth", Int64.Type},
+				        {"YearMonthText", type text},
+				        {"DayOfWeek", Int64.Type},
+				        {"DayName", type text},
+				        {"IsWeekend", type logical},
+				        {"FiscalYear", Int64.Type},
+				        {"FiscalQuarter", Int64.Type},
+				        {"IsCurrentMonth", type logical},
+				        {"IsCurrentYear", type logical}
+				    })
+				in
+				    FinalTable
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,44 @@
+table Funds
+	lineageTag: 80e3ed4f-1c9f-405d-ac2e-95057a01fe1a
+
+	column FundID
+		dataType: string
+		lineageTag: 3e8e9fce-14f7-4dc8-bf81-9b781453c97d
+		summarizeBy: none
+		sourceColumn: FundID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FundName
+		dataType: string
+		lineageTag: c024db69-246f-486a-b618-ca6c6496f08c
+		summarizeBy: none
+		sourceColumn: FundName
+
+		annotation SummarizationSetBy = Automatic
+
+	column VintageYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d094393-e0d2-4a8b-a043-cb93edab5c91
+		summarizeBy: none
+		sourceColumn: VintageYear
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Funds = m
+		mode: import
+		queryGroup: 'Excel Datasource'
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\pontus.johansson\Downloads\portfolio_monitoring_case_data.xlsx"), null, true),
+				    Funds_Sheet = Source{[Item="Funds",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Funds_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"FundID", type text}, {"FundName", type text}, {"VintageYear", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

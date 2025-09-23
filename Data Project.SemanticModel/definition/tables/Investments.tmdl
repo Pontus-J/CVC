@@ -1,0 +1,59 @@
+table Investments
+	lineageTag: 33bd1eb2-b740-4320-a766-152d8a744629
+
+	column CompanyID
+		dataType: string
+		lineageTag: c82ff810-0202-439d-ab6d-e79a6c550228
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FundID
+		dataType: string
+		lineageTag: 20b336aa-bacc-4e19-a9e0-5bfd6431790f
+		summarizeBy: none
+		sourceColumn: FundID
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvestmentDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d92e6edc-21ca-40d1-b5e1-38ec1575ff72
+		summarizeBy: none
+		sourceColumn: InvestmentDate
+
+		variation Variation
+			isDefault
+			relationship: 9d67d682-bf11-491d-9aa0-ad747a32df9b
+			defaultHierarchy: LocalDateTable_b0b2a247-5374-4a1e-8f8b-82c240a0033c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column OwnershipType
+		dataType: string
+		lineageTag: 1211095b-1c75-40e8-b610-726dcf8ea07c
+		summarizeBy: none
+		sourceColumn: OwnershipType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Investments = m
+		mode: import
+		queryGroup: 'Excel Datasource'
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\pontus.johansson\Downloads\portfolio_monitoring_case_data.xlsx"), null, true),
+				    Investments_Sheet = Source{[Item="Investments",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Investments_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CompanyID", type text}, {"FundID", type text}, {"InvestmentDate", type date}, {"OwnershipType", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

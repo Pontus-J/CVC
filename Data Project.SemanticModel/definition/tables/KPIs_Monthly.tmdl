@@ -1,0 +1,79 @@
+table KPIs_Monthly
+	lineageTag: a3ac80a6-c2c6-4caf-9ab7-471967bca965
+
+	column CompanyID
+		dataType: string
+		lineageTag: f200fab2-17ed-438f-a4dd-afd997f69477
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: b44c6641-95ee-414c-8071-96998fd15d46
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 4338eef9-4bed-4105-89f8-f25af0059463
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e1d9238-d555-4e7d-b171-d22c1151227b
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+		variation Variation
+			isDefault
+			relationship: 0e8b3f62-bf80-430d-814c-4d9b79dc81fc
+			defaultHierarchy: LocalDateTable_4319b484-22a9-4fd3-ab7c-f5ab6d0bc10d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column KPI_Name
+		dataType: string
+		lineageTag: abc742d0-4e7f-46fd-aece-da3f65dde2ab
+		summarizeBy: none
+		sourceColumn: KPI_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column KPI_Value
+		dataType: double
+		lineageTag: ff454525-e474-4fe3-a110-6a6eb6037fed
+		summarizeBy: sum
+		sourceColumn: KPI_Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition KPIs_Monthly = m
+		mode: import
+		queryGroup: 'Excel Datasource'
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\pontus.johansson\Downloads\portfolio_monitoring_case_data.xlsx"), null, true),
+				    KPIs_Monthly_Sheet = Source{[Item="KPIs_Monthly",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(KPIs_Monthly_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CompanyID", type text}, {"Year", Int64.Type}, {"Month", Int64.Type}, {"YearMonth", type date}, {"KPI_Name", type text}, {"KPI_Value", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

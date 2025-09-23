@@ -1,0 +1,201 @@
+table Financials_Monthly
+	lineageTag: 5adebc30-d336-42dc-89e9-acf98e619572
+
+	column CompanyID
+		dataType: string
+		lineageTag: b7e28003-a2ed-45a4-a0b0-78a85607ff88
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e2000af0-2a79-4510-8080-e59d6f9650ba
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: b4fd5a65-6380-4370-b3fc-2ef9fffdc3f9
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9faa2b93-81c8-4f92-90f0-95365346b93b
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+		variation Variation
+			isDefault
+			relationship: c528a73c-6e24-4e15-b04b-f1ac08e0fe4e
+			defaultHierarchy: LocalDateTable_13645db2-f8be-4a72-924c-9ed63212f3ec.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Revenue
+		dataType: double
+		lineageTag: ff9e9262-8170-4ff0-8dd5-9ac2c1fa7ff7
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GrossProfit
+		dataType: double
+		lineageTag: 36d65752-ab13-4a90-94b1-487187d98a20
+		summarizeBy: sum
+		sourceColumn: GrossProfit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COGS
+		dataType: double
+		lineageTag: c082fa4f-6144-4af2-ae24-82a6bd7e6192
+		summarizeBy: sum
+		sourceColumn: COGS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBITDA
+		dataType: double
+		lineageTag: 812247ca-e127-41a7-ac01-1951fac5860a
+		summarizeBy: sum
+		sourceColumn: EBITDA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Depreciation
+		dataType: double
+		lineageTag: bc82c18d-5687-478f-b781-9a9d33921856
+		summarizeBy: sum
+		sourceColumn: Depreciation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Amortization
+		dataType: double
+		lineageTag: 495d6cc0-a7ac-4acf-aeeb-d7efde8c168d
+		summarizeBy: sum
+		sourceColumn: Amortization
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBITA
+		dataType: double
+		lineageTag: d48bdb57-1b6f-40aa-a7cb-e3fac13b471f
+		summarizeBy: sum
+		sourceColumn: EBITA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBIT
+		dataType: double
+		lineageTag: 2e71ffaa-2b56-43e9-a890-b04f38404ef5
+		summarizeBy: sum
+		sourceColumn: EBIT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetIncome
+		dataType: double
+		lineageTag: aa5cd4ab-51bb-4276-bb32-1e0edc56e326
+		summarizeBy: sum
+		sourceColumn: NetIncome
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CashFromOps
+		dataType: double
+		lineageTag: dec12562-2f48-49cd-98df-e41ea67c379a
+		summarizeBy: sum
+		sourceColumn: CashFromOps
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Capex
+		dataType: double
+		lineageTag: fb9c6d0c-1060-4737-8d12-69ecdc752a14
+		summarizeBy: sum
+		sourceColumn: Capex
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBITDA_Margin_%
+		dataType: double
+		lineageTag: 4166ca30-e5d7-4c72-b6f3-c2cec2cf90e9
+		summarizeBy: sum
+		sourceColumn: EBITDA_Margin_%
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WorkingCapital
+		dataType: double
+		lineageTag: bdce44cc-8b05-4e67-8cfc-b66ae61cffa6
+		summarizeBy: sum
+		sourceColumn: WorkingCapital
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetDebt
+		dataType: double
+		lineageTag: 7679a930-3f60-40fd-af8c-f6cd091296f5
+		summarizeBy: sum
+		sourceColumn: NetDebt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Financials_Monthly = m
+		mode: import
+		queryGroup: 'Excel Datasource'
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\pontus.johansson\Downloads\portfolio_monitoring_case_data.xlsx"), null, true),
+				    Financials_Monthly_Sheet = Source{[Item="Financials_Monthly",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Financials_Monthly_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CompanyID", type text}, {"Year", Int64.Type}, {"Month", Int64.Type}, {"YearMonth", type date}, {"Revenue", type number}, {"GrossProfit", type number}, {"COGS", type number}, {"EBITDA", type number}, {"Depreciation", type number}, {"Amortization", type number}, {"EBITA", type number}, {"EBIT", type number}, {"NetIncome", type number}, {"CashFromOps", type number}, {"Capex", type number}, {"EBITDA_Margin_%", type number}, {"WorkingCapital", type number}, {"NetDebt", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

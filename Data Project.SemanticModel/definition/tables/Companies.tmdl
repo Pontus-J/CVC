@@ -1,0 +1,101 @@
+table Companies
+	lineageTag: e89a3bda-9993-4cde-9040-887b28813d90
+
+	column CompanyID
+		dataType: string
+		lineageTag: fdcaad32-40ce-4453-8131-e548f2ca9067
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: 87df30f4-bfde-49f3-a0d3-901362a9837c
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LegalName
+		dataType: string
+		lineageTag: 372957f3-07de-4e96-91bc-b1701ce581f8
+		summarizeBy: none
+		sourceColumn: LegalName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Industry
+		dataType: string
+		lineageTag: e39a32bf-4b54-4bd9-a5cc-8e3658c384d3
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subindustry
+		dataType: string
+		lineageTag: dbc090ae-823a-46b5-b751-5d15ba06f18f
+		summarizeBy: none
+		sourceColumn: Subindustry
+
+		annotation SummarizationSetBy = Automatic
+
+	column HQ_City
+		dataType: string
+		lineageTag: 8b2d0f27-1e38-4f13-b181-36cf35e3ee79
+		summarizeBy: none
+		sourceColumn: HQ_City
+
+		annotation SummarizationSetBy = Automatic
+
+	column HQ_Country
+		dataType: string
+		lineageTag: 38edb329-0777-4ded-856e-5807e49c0c82
+		summarizeBy: none
+		sourceColumn: HQ_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Website
+		dataType: string
+		lineageTag: 45534a50-41ff-4cf3-afe0-39c5da771431
+		summarizeBy: none
+		sourceColumn: Website
+
+		annotation SummarizationSetBy = Automatic
+
+	column FoundedYear
+		dataType: int64
+		formatString: 0
+		lineageTag: e3146435-1b46-4d2f-9e9a-849c526dfc0d
+		summarizeBy: sum
+		sourceColumn: FoundedYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employees
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c72fa84-2012-47c8-995b-b2853f694981
+		summarizeBy: sum
+		sourceColumn: Employees
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Companies = m
+		mode: import
+		queryGroup: 'Excel Datasource'
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\pontus.johansson\Downloads\portfolio_monitoring_case_data.xlsx"), null, true),
+				    Companies_Sheet = Source{[Item="Companies",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Companies_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CompanyID", type text}, {"CompanyName", type text}, {"LegalName", type text}, {"Industry", type text}, {"Subindustry", type text}, {"HQ_City", type text}, {"HQ_Country", type text}, {"Website", type text}, {"FoundedYear", Int64.Type}, {"Employees", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

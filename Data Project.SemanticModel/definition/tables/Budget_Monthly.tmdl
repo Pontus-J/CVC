@@ -1,0 +1,187 @@
+table Budget_Monthly
+	lineageTag: 6d6cdc79-1769-4686-ae19-453f3695f75b
+
+	column CompanyID
+		dataType: string
+		lineageTag: c0a0c20b-67b0-4127-a1fe-06f4ab18e4ac
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: cd23e539-9ea5-414e-985c-7fc881a1fbed
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ff86bb5-95c2-4af4-b2da-5acb4583ec6e
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 839dbd27-7482-492d-a2b4-0cb82adcf754
+		summarizeBy: sum
+		sourceColumn: YearMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dfe71108-e783-4f4c-9e0a-a6fe8b597df7
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 5317a58f-5111-4ff2-9548-9699957bf44d
+			defaultHierarchy: LocalDateTable_d35a92fe-8969-4e09-b93a-23613978fe1d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Revenue_Budget
+		dataType: double
+		lineageTag: 52e61428-6822-41de-b89d-bb6aab13a135
+		summarizeBy: sum
+		sourceColumn: Revenue_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EBITDA_Budget
+		dataType: double
+		lineageTag: 574e5506-06c3-46ac-a725-fb60323b356c
+		summarizeBy: sum
+		sourceColumn: EBITDA_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COGS_Budget
+		dataType: double
+		lineageTag: d0dc78a8-4b61-4c7a-977e-628a55633ba0
+		summarizeBy: sum
+		sourceColumn: COGS_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CashFromOps_Budget
+		dataType: double
+		lineageTag: 65d9ea15-ea01-4b09-b9e8-93ce7c61dd1d
+		summarizeBy: sum
+		sourceColumn: CashFromOps_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Capex_Budget
+		dataType: double
+		lineageTag: 2539593d-8197-40df-beb1-25cb84610fe8
+		summarizeBy: sum
+		sourceColumn: Capex_Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Budget_Monthly = m
+		mode: import
+		queryGroup: 'New Tables'
+		source = ```
+				let
+				    // Load Annual_Budget
+				    Source = Annual_Budget,
+				    
+				    // Create month expansion (1 row becomes 12 rows)
+				    AddMonthList = Table.AddColumn(Source, "MonthList", each {1..12}),
+				    ExpandMonths = Table.ExpandListColumn(AddMonthList, "MonthList"),
+				    RenameMonth = Table.RenameColumns(ExpandMonths, {{"MonthList", "Month"}}),
+				    
+				    // Add Date column for relationships
+				    AddDate = Table.AddColumn(RenameMonth, "Date", each 
+				        Date.FromText(Text.From([FiscalYear]) & "-" & Text.PadStart(Text.From([Month]), 2, "0") & "-01"), type date),
+				    
+				    // Unpivot budget metrics to match seasonal weights structure
+				    SelectBudgetColumns = Table.SelectColumns(AddDate, {"CompanyID", "FiscalYear", "Month", "Date", "Revenue_Budget", "EBITDA_Budget", "COGS_Budget", "CashFromOps_Budget", "Capex_Budget"}),
+				    
+				    // Rename columns to match seasonal weights
+				    RenameColumns = Table.RenameColumns(SelectBudgetColumns, {
+				        {"Revenue_Budget", "Revenue"}, 
+				        {"EBITDA_Budget", "EBITDA"}, 
+				        {"COGS_Budget", "COGS"}, 
+				        {"CashFromOps_Budget", "CashFromOps"}, 
+				        {"Capex_Budget", "Capex"}
+				    }),
+				    
+				    // Unpivot budget values
+				    UnpivotBudget = Table.UnpivotOtherColumns(RenameColumns, {"CompanyID", "FiscalYear", "Month", "Date"}, "Metric", "AnnualBudgetValue"),
+				    
+				    // Join with seasonal weights
+				    JoinWeights = Table.NestedJoin(UnpivotBudget, {"CompanyID", "Month", "Metric"}, SeasonalWeights, {"CompanyID", "Month", "Metric"}, "Weights", JoinKind.LeftOuter),
+				    ExpandWeights = Table.ExpandTableColumn(JoinWeights, "Weights", {"SeasonalWeight"}),
+				    
+				    // Apply seasonal weighting (with fallback to even distribution)
+				    AddMonthlyBudget = Table.AddColumn(ExpandWeights, "MonthlyBudgetValue", each 
+				        if [SeasonalWeight] = null then [AnnualBudgetValue] / 12 
+				        else [AnnualBudgetValue] * [SeasonalWeight], type number),
+				    
+				    // Pivot back to get separate columns per metric
+				    PivotBack = Table.Pivot(Table.SelectColumns(AddMonthlyBudget, {"CompanyID", "FiscalYear", "Month", "Date", "Metric", "MonthlyBudgetValue"}), 
+				        List.Distinct(AddMonthlyBudget[Metric]), "Metric", "MonthlyBudgetValue"),
+				    
+				    // Rename back to budget naming convention
+				    RenameBudgetColumns = Table.RenameColumns(PivotBack, {
+				        {"Revenue", "Revenue_Budget"}, 
+				        {"EBITDA", "EBITDA_Budget"}, 
+				        {"COGS", "COGS_Budget"}, 
+				        {"CashFromOps", "CashFromOps_Budget"}, 
+				        {"Capex", "Capex_Budget"}
+				    }),
+				    
+				    // Add Year column for consistency
+				    AddYear = Table.AddColumn(RenameBudgetColumns, "Year", each [FiscalYear], Int64.Type),
+				    
+				    // Add YearMonth for consistency with other fact tables
+				    AddYearMonth = Table.AddColumn(AddYear, "YearMonth", each [Year] * 100 + [Month], Int64.Type),
+				    
+				    // Final column selection and typing
+				    FinalBudget = Table.SelectColumns(AddYearMonth, {"CompanyID", "Year", "Month", "YearMonth", "Date", "Revenue_Budget", "EBITDA_Budget", "COGS_Budget", "CashFromOps_Budget", "Capex_Budget"}),
+				    
+				    TypedBudgetTable = Table.TransformColumnTypes(FinalBudget, {
+				        {"CompanyID", type text},
+				        {"Year", Int64.Type},
+				        {"Month", Int64.Type}, 
+				        {"YearMonth", Int64.Type},
+				        {"Date", type date},
+				        {"Revenue_Budget", type number},
+				        {"EBITDA_Budget", type number},
+				        {"COGS_Budget", type number},
+				        {"CashFromOps_Budget", type number},
+				        {"Capex_Budget", type number}
+				    })
+				in
+				    TypedBudgetTable
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

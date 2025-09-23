@@ -1,0 +1,86 @@
+table SeasonalWeights
+	lineageTag: f50cb64f-3dde-4568-99cd-85bdcbd56c44
+
+	column CompanyID
+		dataType: string
+		lineageTag: 56fe9edd-323b-432d-8ff1-cc442463fc95
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 0de07f56-06b1-438e-8cc2-1a0e5cf745e4
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Metric
+		dataType: string
+		lineageTag: aae2bb59-b692-47dc-99af-7e788ee2e649
+		summarizeBy: none
+		sourceColumn: Metric
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeasonalWeight
+		dataType: double
+		lineageTag: 6fe21b26-42cb-49f5-9bfd-2ceefecba019
+		summarizeBy: sum
+		sourceColumn: SeasonalWeight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition SeasonalWeights = m
+		mode: import
+		queryGroup: 'New Tables'
+		source = ```
+				let
+				    // Load Financials_Monthly
+				    Source = Financials_Monthly,
+				    
+				    // Filter to 2023 for baseline seasonal patterns (most recent complete year)
+				    Historical2023 = Table.SelectRows(Source, each [Year] = 2023),
+				    
+				    // Select key columns and unpivot to get all metrics
+				    SelectColumns = Table.SelectColumns(Historical2023, {"CompanyID", "Month", "Revenue", "EBITDA", "COGS", "CashFromOps", "Capex"}),
+				    
+				    // Unpivot to get one row per company/month/metric
+				    UnpivotedData = Table.UnpivotOtherColumns(SelectColumns, {"CompanyID", "Month"}, "Metric", "MonthlyValue"),
+				    
+				    // Calculate annual totals per company per metric
+				    AnnualTotals = Table.Group(UnpivotedData, {"CompanyID", "Metric"}, 
+				        {{"AnnualTotal", each List.Sum([MonthlyValue]), type number}}),
+				    
+				    // Join monthly data with annual totals
+				    JoinedData = Table.NestedJoin(UnpivotedData, {"CompanyID", "Metric"}, AnnualTotals, {"CompanyID", "Metric"}, "Annual", JoinKind.Inner),
+				    ExpandAnnual = Table.ExpandTableColumn(JoinedData, "Annual", {"AnnualTotal"}),
+				    
+				    // Calculate seasonal weight (monthly value / annual total)
+				    AddSeasonalWeight = Table.AddColumn(ExpandAnnual, "SeasonalWeight", each 
+				        if [AnnualTotal] = 0 or [AnnualTotal] = null then (1/12) 
+				        else [MonthlyValue] / [AnnualTotal], type number),
+				    
+				    // Clean up and format
+				    FinalWeights = Table.SelectColumns(AddSeasonalWeight, {"CompanyID", "Month", "Metric", "SeasonalWeight"}),
+				    
+				    // Add data types
+				    TypedTable = Table.TransformColumnTypes(FinalWeights, {
+				        {"CompanyID", type text},
+				        {"Month", Int64.Type},
+				        {"Metric", type text},
+				        {"SeasonalWeight", type number}
+				    })
+				in
+				    TypedTable
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

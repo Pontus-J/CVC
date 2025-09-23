@@ -1,0 +1,67 @@
+table Comments
+	lineageTag: 18561d9f-2106-473b-98a9-7b96ec013aca
+
+	column CompanyID
+		dataType: string
+		lineageTag: 063e4eef-05bd-4dc8-9d81-0acd86cc3eed
+		summarizeBy: none
+		sourceColumn: CompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CommentDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 64daa946-e5b5-48bc-b3bd-04bccf51bc56
+		summarizeBy: none
+		sourceColumn: CommentDate
+
+		variation Variation
+			isDefault
+			relationship: db8e0993-a889-4ff3-a81d-0d469679dcda
+			defaultHierarchy: LocalDateTable_bd482446-7c2c-4c22-8ad8-de3323c75125.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Author
+		dataType: string
+		lineageTag: 31499edd-0b3e-45fa-8e2c-8bad592ed516
+		summarizeBy: none
+		sourceColumn: Author
+
+		annotation SummarizationSetBy = Automatic
+
+	column Role
+		dataType: string
+		lineageTag: ce895ac4-815e-42bf-9821-4a7c2d41291b
+		summarizeBy: none
+		sourceColumn: Role
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: 36c17e78-5baa-49a2-9f3e-a7dcafb98ac6
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Comments = m
+		mode: import
+		queryGroup: 'Excel Datasource'
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\pontus.johansson\Downloads\portfolio_monitoring_case_data.xlsx"), null, true),
+				    Comments_Sheet = Source{[Item="Comments",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Comments_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CompanyID", type text}, {"CommentDate", type date}, {"Author", type text}, {"Role", type text}, {"Comment", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

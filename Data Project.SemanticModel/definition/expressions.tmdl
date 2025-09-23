@@ -1,0 +1,24 @@
+expression 'Quality Assurance' = ```
+		// Validation: Check that monthly budgets sum to annual budgets
+		let
+		    BudgetCheck = Table.Group(Budget_Monthly, {"CompanyID", "Year"}, {
+		        {"Revenue_Sum", each List.Sum([Revenue_Budget]), type number},
+		        {"EBITDA_Sum", each List.Sum([EBITDA_Budget]), type number}
+		    }),
+		    
+		    AnnualCheck = Table.NestedJoin(BudgetCheck, {"CompanyID", "Year"}, Annual_Budget, {"CompanyID", "FiscalYear"}, "Annual", JoinKind.Inner),
+		    ExpandAnnual = Table.ExpandTableColumn(AnnualCheck, "Annual", {"Revenue_Budget", "EBITDA_Budget"}),
+		    
+		    AddVariance = Table.AddColumn(ExpandAnnual, "Revenue_Variance", each [Revenue_Sum] - [Revenue_Budget]),
+		    AddEBITDAVariance = Table.AddColumn(AddVariance, "EBITDA_Variance", each [EBITDA_Sum] - [EBITDA_Budget]),
+		    #"Changed Type" = Table.TransformColumnTypes(AddEBITDAVariance,{{"Revenue_Variance", Currency.Type}, {"EBITDA_Variance", Currency.Type}})
+		in
+		    #"Changed Type"
+		```
+	lineageTag: b3236604-be66-42f6-922e-d5ea42da84b3
+	queryGroup: 'New Tables'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
