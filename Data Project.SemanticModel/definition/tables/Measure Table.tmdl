@@ -12,9 +12,8 @@ table 'Measure Table'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure EBITDA_Margin = DIVIDE([EBITDA], [Revenue], 0)
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 651f5e54-5eb1-40ef-aded-46b1ea6abee1
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure NetDebt = SUM(Financials_Monthly[NetDebt])
 		lineageTag: cf6c71ae-a10f-4b55-8c82-6a7e1b6e4a3a
@@ -391,6 +390,38 @@ table 'Measure Table'
 	measure Check_YTD_Dec_Equal = [Revenue_Dec_Check] = [Revenue_YTD_Dec_Check]
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: bb786654-be29-4190-af67-5a228c57272a
+
+	measure LTM_Check = ```
+			
+			VAR MonthsInLTM = 
+			    CALCULATE(
+			        DISTINCTCOUNT(Financials_Monthly[YearMonth]),
+			        DATESINPERIOD(
+			            'Date Table'[Date],
+			            MAX(Financials_Monthly[YearMonth]),
+			            -12,
+			            MONTH
+			        )
+			    )
+			RETURN MonthsInLTM
+			```
+		formatString: 0
+		lineageTag: 22a1ac86-1098-4f2c-b8d1-3fceee52b2cd
+
+	measure KPI_LTM =
+			
+			CALCULATE(
+			    AVERAGE(KPIs_Monthly[KPI_Value]),
+			    DATESINPERIOD(
+			        'Date Table'[Date],
+			        MAX(KPIs_Monthly[YearMonth]),
+			        -12,
+			        MONTH
+			    )
+			)
+		lineageTag: b5178d3c-41c0-41d6-be17-1c05e606091d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column1
 		dataType: string

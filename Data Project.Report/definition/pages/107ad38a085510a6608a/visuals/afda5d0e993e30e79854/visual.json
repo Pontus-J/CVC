@@ -1,0 +1,159 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "afda5d0e993e30e79854",
+  "position": {
+    "x": 354.23519009725908,
+    "y": 485.51724137931035,
+    "z": 9000,
+    "height": 221.82139699381079,
+    "width": 236.53404067197172,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Companies"
+                    }
+                  },
+                  "Property": "FoundedYear"
+                }
+              },
+              "queryRef": "Companies.FoundedYear",
+              "nativeQueryRef": "FoundedYear"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Companies"
+                    }
+                  },
+                  "Property": "Employees"
+                }
+              },
+              "queryRef": "Companies.Employees",
+              "nativeQueryRef": "Employees"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Companies"
+                    }
+                  },
+                  "Property": "Industry"
+                }
+              },
+              "queryRef": "Companies.Industry",
+              "nativeQueryRef": "Industry"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Companies"
+                    }
+                  },
+                  "Property": "Subindustry"
+                }
+              },
+              "queryRef": "Companies.Subindustry",
+              "nativeQueryRef": "Subindustry"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Companies"
+                    }
+                  },
+                  "Property": "HQ_Country"
+                }
+              },
+              "queryRef": "Companies.HQ_Country",
+              "nativeQueryRef": "HQ Country",
+              "displayName": "HQ Country"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Companies"
+                    }
+                  },
+                  "Property": "HQ_City"
+                }
+              },
+              "queryRef": "Companies.HQ_City",
+              "nativeQueryRef": "HQ City",
+              "displayName": "HQ City"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Company Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

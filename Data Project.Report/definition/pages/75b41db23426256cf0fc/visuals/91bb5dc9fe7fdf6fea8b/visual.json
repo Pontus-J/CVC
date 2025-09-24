@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "f29c934261a0b2069f9d",
+  "name": "91bb5dc9fe7fdf6fea8b",
   "position": {
-    "x": 11.317418213969939,
-    "y": 485.51724137931035,
-    "z": 1000,
-    "height": 221.82139699381079,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 208.24049513704688,
     "width": 225.21662245800178,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -136,22 +136,6 @@
             }
           }
         }
-      ],
-      "value": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -195,7 +179,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Company'"
+                  "Value": "'Company Selector'"
                 }
               }
             }

@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "b776f362125eec57b913",
+  "name": "0cd9dcf0aed6098a69af",
   "position": {
-    "x": 11.317418213969939,
-    "y": 0,
-    "z": 3000,
-    "height": 153.91688770999116,
-    "width": 1031.0167992926615,
-    "tabOrder": 1000
+    "x": 0,
+    "y": 224.08488063660479,
+    "z": 4002,
+    "height": 495.70291777188334,
+    "width": 639.43412908930156,
+    "tabOrder": 4002
   },
   "visual": {
-    "visualType": "cardVisual",
+    "visualType": "lineClusteredColumnComboChart",
     "query": {
       "queryState": {
-        "Data": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Date Table"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              },
+              "queryRef": "Date Table.Date",
+              "nativeQueryRef": "Date",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
           "projections": [
             {
               "field": {
@@ -23,13 +42,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Revenue_LTM"
+                  "Property": "Revenue"
                 }
               },
-              "queryRef": "Measure Table.Revenue_LTM",
-              "nativeQueryRef": "Revenue",
-              "displayName": "Revenue",
-              "format": "#,0"
+              "queryRef": "Measure Table.Revenue",
+              "nativeQueryRef": "Revenue"
             },
             {
               "field": {
@@ -39,14 +56,16 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "EBITDA_LTM"
+                  "Property": "EBITDA"
                 }
               },
-              "queryRef": "Measure Table.EBITDA_LTM",
-              "nativeQueryRef": "EBITDA",
-              "displayName": "EBITDA",
-              "format": "#,0"
-            },
+              "queryRef": "Measure Table.EBITDA",
+              "nativeQueryRef": "EBITDA"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -55,45 +74,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "EBITDA_Margin_LTM"
+                  "Property": "EBITDA_Margin"
                 }
               },
-              "queryRef": "Measure Table.EBITDA_Margin_LTM",
-              "nativeQueryRef": "EBITDA Margin",
-              "displayName": "EBITDA Margin",
-              "format": "0%;-0%;0%"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "CashFromOps_LTM"
-                }
-              },
-              "queryRef": "Measure Table.CashFromOps_LTM",
-              "nativeQueryRef": "CashFromOps",
-              "displayName": "CashFromOps",
-              "format": "#,0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "Capex_LTM"
-                }
-              },
-              "queryRef": "Measure Table.Capex_LTM",
-              "nativeQueryRef": "Capex",
-              "displayName": "Capex",
-              "format": "0"
+              "queryRef": "Measure Table.EBITDA_Margin",
+              "nativeQueryRef": "EBITDA_Margin"
             }
           ]
         }
@@ -102,92 +87,80 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure Table"
+                    "Entity": "Date Table"
                   }
                 },
-                "Property": "Revenue_LTM"
+                "Property": "Date"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "layout": [
+      "valueAxis": [
         {
           "properties": {
-            "maxTiles": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "6L"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "rectangleRoundedCurve": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
+                  "Value": "true"
                 }
               }
             },
-            "rectangleRoundedCurveCustomStyle": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "shapeCustomRectangle": [
-        {
-          "properties": {
-            "tileShape": {
-              "expr": {
-                "Literal": {
-                  "Value": "'rectangleRoundedByPixel'"
+                  "Value": "'m EUR'"
                 }
               }
             },
-            "rectangleRoundedCurve": {
+            "start": {
               "expr": {
                 "Literal": {
-                  "Value": "10L"
+                  "Value": "0D"
+                }
+              }
+            },
+            "secTitleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'EBITDA Margin %'"
+                }
+              }
+            },
+            "secStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "secEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
@@ -196,17 +169,10 @@
       "title": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Company Overview LTM - m EUR '"
+                  "Value": "'Key Metrics by Month - Left axis blue, right axis orange'"
                 }
               }
             }

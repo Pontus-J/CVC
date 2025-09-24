@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "b776f362125eec57b913",
+  "name": "9e2d3d3eac37b2d74c2e",
   "position": {
-    "x": 11.317418213969939,
+    "x": 225.21662245800178,
     "y": 0,
-    "z": 3000,
-    "height": 153.91688770999116,
-    "width": 1031.0167992926615,
-    "tabOrder": 1000
+    "z": 1000,
+    "height": 208.24049513704688,
+    "width": 866.91423519009732
   },
   "visual": {
     "visualType": "cardVisual",
@@ -206,7 +205,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Company Overview LTM - m EUR '"
+                  "Value": "'Company Overview 2024 - m EUR '"
                 }
               }
             }

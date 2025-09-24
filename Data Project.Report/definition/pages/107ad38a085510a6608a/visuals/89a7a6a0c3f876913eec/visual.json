@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "b776f362125eec57b913",
+  "name": "89a7a6a0c3f876913eec",
   "position": {
-    "x": 11.317418213969939,
+    "x": 1049.1246684350133,
     "y": 0,
-    "z": 3000,
+    "z": 4000,
     "height": 153.91688770999116,
-    "width": 1031.0167992926615,
-    "tabOrder": 1000
+    "width": 230.87533156498674,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,77 +23,13 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Revenue_LTM"
+                  "Property": "NetDebt_Latest"
                 }
               },
-              "queryRef": "Measure Table.Revenue_LTM",
-              "nativeQueryRef": "Revenue",
-              "displayName": "Revenue",
+              "queryRef": "Measure Table.NetDebt_Latest",
+              "nativeQueryRef": "NetDebt",
+              "displayName": "NetDebt",
               "format": "#,0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "EBITDA_LTM"
-                }
-              },
-              "queryRef": "Measure Table.EBITDA_LTM",
-              "nativeQueryRef": "EBITDA",
-              "displayName": "EBITDA",
-              "format": "#,0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "EBITDA_Margin_LTM"
-                }
-              },
-              "queryRef": "Measure Table.EBITDA_Margin_LTM",
-              "nativeQueryRef": "EBITDA Margin",
-              "displayName": "EBITDA Margin",
-              "format": "0%;-0%;0%"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "CashFromOps_LTM"
-                }
-              },
-              "queryRef": "Measure Table.CashFromOps_LTM",
-              "nativeQueryRef": "CashFromOps",
-              "displayName": "CashFromOps",
-              "format": "#,0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "Capex_LTM"
-                }
-              },
-              "queryRef": "Measure Table.Capex_LTM",
-              "nativeQueryRef": "Capex",
-              "displayName": "Capex",
-              "format": "0"
             }
           ]
         }
@@ -108,7 +44,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Revenue_LTM"
+                "Property": "NetDebt_Latest"
               }
             },
             "direction": "Descending"
@@ -206,7 +142,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Company Overview LTM - m EUR '"
+                  "Value": "'BS CB Latest (m EUR) '"
                 }
               }
             }
