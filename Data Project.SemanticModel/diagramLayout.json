@@ -4,19 +4,19 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 145.2251994200617,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 404.26074319838688,
-            "y": 600.94055397638692
+            "x": 659.12532349646142,
+            "y": 0
           },
           "nodeIndex": "Annual_Budget",
           "nodeLineageTag": "069be5c9-6f13-4a1e-894c-a63b3fb5e151",
           "size": {
-            "height": 300,
+            "height": 169.94023995098254,
             "width": 234
           },
           "zIndex": 1
@@ -36,21 +36,21 @@
         },
         {
           "location": {
-            "x": 566.53352738328886,
-            "y": 242.48379343034577
+            "x": 529.74894878356679,
+            "y": 245.11126333032587
           },
           "nodeIndex": "Companies",
           "nodeLineageTag": "e89a3bda-9993-4cde-9040-887b28813d90",
           "size": {
-            "height": 250.0780719003771,
+            "height": 261.90168645028785,
             "width": 234
           },
           "zIndex": 7
         },
         {
           "location": {
-            "x": 704.68382867210516,
-            "y": 591.53884630070434
+            "x": 657.38937047246247,
+            "y": 588.91137640072418
           },
           "nodeIndex": "Financials_Monthly",
           "nodeLineageTag": "5adebc30-d336-42dc-89e9-acf98e619572",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 252.717018507952,
-            "y": 0
+            "x": 18.872197409718609,
+            "y": 2.6274698999801487
           },
           "nodeIndex": "Funds",
           "nodeLineageTag": "80e3ed4f-1c9f-405d-ac2e-95057a01fe1a",
@@ -75,7 +75,7 @@
         },
         {
           "location": {
-            "x": 560.406270840877,
+            "x": 305.54169054280254,
             "y": 0
           },
           "nodeIndex": "Investments",
@@ -88,34 +88,34 @@
         },
         {
           "location": {
-            "x": 1005.3376540755172,
-            "y": 630.48054143894171
+            "x": 919.94488232616231,
+            "y": 592.38222788922951
           },
           "nodeIndex": "KPIs_Monthly",
           "nodeLineageTag": "a3ac80a6-c2c6-4caf-9ab7-471967bca965",
           "size": {
-            "height": 224,
+            "height": 289.68674749950378,
             "width": 234
           },
           "zIndex": 6
         },
         {
           "location": {
-            "x": 1069.7502880181992,
-            "y": 103.39563967307504
+            "x": 788.6110087203233,
+            "y": 242.6515443720229
           },
           "nodeIndex": "Date Table",
           "nodeLineageTag": "f46027b4-2125-4b5a-bcf1-fb836757ee91",
           "size": {
-            "height": 237.18706067007179,
+            "height": 268.7166994698336,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 10
         },
         {
           "location": {
-            "x": 158.22077652376561,
-            "y": 590.805700936
+            "x": 397.32053742195922,
+            "y": 592.11943588599
           },
           "nodeIndex": "Budget_Monthly",
           "nodeLineageTag": "6d6cdc79-1769-4686-ae19-453f3695f75b",
@@ -123,7 +123,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 9
+          "zIndex": 8
         },
         {
           "location": {
@@ -136,7 +136,20 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 10
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1952.7693117046383,
+            "y": 394.059717942995
+          },
+          "nodeIndex": "Measure Table",
+          "nodeLineageTag": "94e57710-314c-4f6f-945e-70c2548b1fb1",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

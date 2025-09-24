@@ -34,11 +34,6 @@ table Financials_Monthly
 		summarizeBy: none
 		sourceColumn: YearMonth
 
-		variation Variation
-			isDefault
-			relationship: c528a73c-6e24-4e15-b04b-f1ac08e0fe4e
-			defaultHierarchy: LocalDateTable_13645db2-f8be-4a72-924c-9ed63212f3ec.'Date Hierarchy'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

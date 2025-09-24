@@ -43,11 +43,6 @@ table Budget_Monthly
 		summarizeBy: none
 		sourceColumn: Date
 
-		variation Variation
-			isDefault
-			relationship: 5317a58f-5111-4ff2-9548-9699957bf44d
-			defaultHierarchy: LocalDateTable_d35a92fe-8969-4e09-b93a-23613978fe1d.'Date Hierarchy'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

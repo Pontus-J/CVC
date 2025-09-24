@@ -18,7 +18,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["Annual_Budget","Comments","Companies","Financials_Monthly","Funds","Investments","KPIs_Monthly","Date Table","SeasonalWeights","Budget_Monthly","Quality Assurance"]
+annotation PBI_QueryOrder = ["Annual_Budget","Comments","Companies","Financials_Monthly","Funds","Investments","KPIs_Monthly","Date Table","SeasonalWeights","Budget_Monthly","Quality Assurance","Measure Table"]
 
 ref table Annual_Budget
 ref table Comments
@@ -26,17 +26,15 @@ ref table DateTableTemplate_aaec74eb-5d0d-448a-afd4-2fdad1961de6
 ref table LocalDateTable_bd482446-7c2c-4c22-8ad8-de3323c75125
 ref table Companies
 ref table Financials_Monthly
-ref table LocalDateTable_13645db2-f8be-4a72-924c-9ed63212f3ec
 ref table Funds
 ref table Investments
 ref table LocalDateTable_b0b2a247-5374-4a1e-8f8b-82c240a0033c
 ref table KPIs_Monthly
-ref table LocalDateTable_4319b484-22a9-4fd3-ab7c-f5ab6d0bc10d
 ref table 'Date Table'
 ref table LocalDateTable_a3e0d1af-eb85-43da-b306-07b23c3dd128
 ref table SeasonalWeights
 ref table Budget_Monthly
-ref table LocalDateTable_d35a92fe-8969-4e09-b93a-23613978fe1d
+ref table 'Measure Table'
 
 ref cultureInfo en-US
 

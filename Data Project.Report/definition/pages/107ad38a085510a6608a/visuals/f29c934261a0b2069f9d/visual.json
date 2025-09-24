@@ -3,10 +3,11 @@
   "name": "f29c934261a0b2069f9d",
   "position": {
     "x": 0,
-    "y": 0,
+    "y": 52.830188679245282,
     "z": 0,
     "height": 333.58490566037739,
-    "width": 236.98113207547172
+    "width": 236.98113207547172,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -187,23 +188,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7063e8ea9f2b3568ce30",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Companies"
-              }
-            },
-            "Property": "CompanyName"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

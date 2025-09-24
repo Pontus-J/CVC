@@ -34,11 +34,6 @@ table KPIs_Monthly
 		summarizeBy: none
 		sourceColumn: YearMonth
 
-		variation Variation
-			isDefault
-			relationship: 0e8b3f62-bf80-430d-814c-4d9b79dc81fc
-			defaultHierarchy: LocalDateTable_4319b484-22a9-4fd3-ab7c-f5ab6d0bc10d.'Date Hierarchy'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

@@ -3,20 +3,10 @@ relationship db8e0993-a889-4ff3-a81d-0d469679dcda
 	fromColumn: Comments.CommentDate
 	toColumn: LocalDateTable_bd482446-7c2c-4c22-8ad8-de3323c75125.Date
 
-relationship c528a73c-6e24-4e15-b04b-f1ac08e0fe4e
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Financials_Monthly.YearMonth
-	toColumn: LocalDateTable_13645db2-f8be-4a72-924c-9ed63212f3ec.Date
-
 relationship 9d67d682-bf11-491d-9aa0-ad747a32df9b
 	joinOnDateBehavior: datePartOnly
 	fromColumn: Investments.InvestmentDate
 	toColumn: LocalDateTable_b0b2a247-5374-4a1e-8f8b-82c240a0033c.Date
-
-relationship 0e8b3f62-bf80-430d-814c-4d9b79dc81fc
-	joinOnDateBehavior: datePartOnly
-	fromColumn: KPIs_Monthly.YearMonth
-	toColumn: LocalDateTable_4319b484-22a9-4fd3-ab7c-f5ab6d0bc10d.Date
 
 relationship AutoDetected_081195ef-c213-4bb6-bbc8-4c422688911a
 	fromColumn: Annual_Budget.CompanyID
@@ -47,11 +37,6 @@ relationship 84702fc4-8b98-46dd-ba23-0194ecae2b56
 	fromColumn: 'Date Table'.Date
 	toColumn: LocalDateTable_a3e0d1af-eb85-43da-b306-07b23c3dd128.Date
 
-relationship 5317a58f-5111-4ff2-9548-9699957bf44d
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Budget_Monthly.Date
-	toColumn: LocalDateTable_d35a92fe-8969-4e09-b93a-23613978fe1d.Date
-
 relationship AutoDetected_4a8113e8-58cc-434f-8365-c798b99619e1
 	fromColumn: SeasonalWeights.CompanyID
 	toColumn: Companies.CompanyID
@@ -59,4 +44,16 @@ relationship AutoDetected_4a8113e8-58cc-434f-8365-c798b99619e1
 relationship AutoDetected_7a3f2d66-59e4-4a22-9e54-780f936ac803
 	fromColumn: Budget_Monthly.CompanyID
 	toColumn: Companies.CompanyID
+
+relationship 146b2eaf-ca0d-1548-1033-319751aef1ef
+	fromColumn: KPIs_Monthly.YearMonth
+	toColumn: 'Date Table'.Date
+
+relationship 6d940c6d-368b-7c6e-33d3-b95b86a2d85b
+	fromColumn: Financials_Monthly.YearMonth
+	toColumn: 'Date Table'.Date
+
+relationship 5e5f0497-2f0a-8ca4-bc2e-13d98a1430f9
+	fromColumn: Budget_Monthly.Date
+	toColumn: 'Date Table'.Date
 
