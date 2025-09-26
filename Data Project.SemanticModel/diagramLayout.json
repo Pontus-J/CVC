@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 597.31147723148445,
         "y": 0
       },
       "nodes": [
@@ -150,6 +150,19 @@
             "width": 234
           },
           "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 2217.89711429492,
+            "y": 380.45568820036209
+          },
+          "nodeIndex": "Date Range",
+          "nodeLineageTag": "ba908f52-128e-4385-b0f7-05a9f872ab68",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "0cd9dcf0aed6098a69af",
+  "name": "67e624c1ee780ab0c586",
   "position": {
-    "x": 0,
+    "x": 303.58038768529076,
     "y": 224.76624857468641,
-    "z": 4002,
+    "z": 4003,
     "height": 494.77765108323831,
-    "width": 303.58038768529076,
-    "tabOrder": 4002
+    "width": 286.06613454960092,
+    "tabOrder": 4003
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -47,38 +47,6 @@
               },
               "queryRef": "Measure Table.Revenue",
               "nativeQueryRef": "Revenue"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "EBITDA"
-                }
-              },
-              "queryRef": "Measure Table.EBITDA",
-              "nativeQueryRef": "EBITDA"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "EBITDA_Margin"
-                }
-              },
-              "queryRef": "Measure Table.EBITDA_Margin",
-              "nativeQueryRef": "EBITDA_Margin"
             }
           ]
         }
@@ -126,27 +94,6 @@
                   "Value": "0D"
                 }
               }
-            },
-            "secTitleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'EBITDA Margin %'"
-                }
-              }
-            },
-            "secStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "secEnd": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
             }
           }
         }
@@ -163,6 +110,83 @@
             }
           }
         }
+      ],
+      "trend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Trend line 1'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "error": [
+        {
+          "properties": {
+            "errorRange": {
+              "kind": "ErrorRange",
+              "percentage": {
+                "lowerBoundDelta": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "0.1D"
+                    }
+                  }
+                },
+                "upperBoundDelta": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "0.1D"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Measure Table.Revenue",
+            "highlightMatching": 1
+          }
+        },
+        {
+          "properties": {
+            "enabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "shadeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Revenue"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -172,7 +196,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Key Metrics by Month - Left axis blue, right axis orange'"
+                  "Value": "'Simple trendline - Does NOT consider seasonality'"
                 }
               }
             }
@@ -212,7 +236,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c2dc159b26a68ea7ec77",
+        "name": "d676ab7b1620076d5ca0",
         "field": {
           "Column": {
             "Expression": {
@@ -226,7 +250,7 @@
         "type": "Categorical"
       },
       {
-        "name": "c996cd6d5c99a0a1c852",
+        "name": "0275edce1db263933696",
         "field": {
           "Measure": {
             "Expression": {
@@ -235,34 +259,6 @@
               }
             },
             "Property": "Revenue"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "55178aa76069b1b33a05",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "EBITDA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4619b2f32300de170047",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "EBITDA_Margin"
           }
         },
         "type": "Advanced"

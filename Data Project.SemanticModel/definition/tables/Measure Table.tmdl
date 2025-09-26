@@ -110,14 +110,14 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Revenue_LTM =
+	measure Revenue_Select =
 			
 			CALCULATE(
 			    [Revenue],
 			    DATESINPERIOD(
 			        'Date Table'[Date],
 			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
+			        SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
 			        MONTH
 			    )
 			)
@@ -125,14 +125,14 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure EBITDA_LTM =
+	measure EBITDA_Select =
 			
 			CALCULATE(
 			    [EBITDA],
 			    DATESINPERIOD(
 			        'Date Table'[Date],
 			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
+			        SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
 			        MONTH
 			    )
 			)
@@ -140,19 +140,19 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure EBITDA_Margin_LTM = DIVIDE([EBITDA_LTM], [Revenue_LTM], 0)
+	measure EBITDA_Margin_LTM = DIVIDE([EBITDA_Select], [Revenue_Select], 0)
 		lineageTag: 5bfcdc15-3d42-4034-b6be-c05319886231
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure CashFromOps_LTM =
+	measure CashFromOps_Select =
 			
 			CALCULATE(
 			    [CashFromOps],
 			    DATESINPERIOD(
 			        'Date Table'[Date],
 			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
+			        SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
 			        MONTH
 			    )
 			)
@@ -160,14 +160,14 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Capex_LTM =
+	measure Capex_Select =
 			
 			CALCULATE(
 			    [Capex],
 			    DATESINPERIOD(
 			        'Date Table'[Date],
 			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
+			        SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
 			        MONTH
 			    )
 			)
@@ -278,9 +278,8 @@ table 'Measure Table'
 			DIVIDE([EBITDA_Var], [EBITDA_Budget], 0)
 			
 			```
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: e8445bac-972a-4a90-9cdb-36f11535463e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure CashFromOps_Var_Pct = DIVIDE([CashFromOps_Var], [CashFromOps_Budget], 0)
 		lineageTag: c1a07377-0cb0-4f74-86da-570622528975
@@ -391,31 +390,36 @@ table 'Measure Table'
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: bb786654-be29-4190-af67-5a228c57272a
 
-	measure LTM_Check = ```
+	measure Select_Check = ```
 			
-			VAR MonthsInLTM = 
-			    CALCULATE(
-			        DISTINCTCOUNT(Financials_Monthly[YearMonth]),
-			        DATESINPERIOD(
-			            'Date Table'[Date],
-			            MAX(Financials_Monthly[YearMonth]),
-			            -12,
-			            MONTH
+			IF(
+			        (VAR MonthsInLTM = 
+			                CALCULATE(
+			                DISTINCTCOUNT(Financials_Monthly[YearMonth]),
+			                DATESINPERIOD(
+			                    'Date Table'[Date],
+			                    MAX(Financials_Monthly[YearMonth]),
+			                    SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
+			                    MONTH
+			                )
 			        )
-			    )
-			RETURN MonthsInLTM
+			    RETURN MonthsInLTM) = -SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
+			1,
+			0
+			)
+			
 			```
 		formatString: 0
 		lineageTag: 22a1ac86-1098-4f2c-b8d1-3fceee52b2cd
 
-	measure KPI_LTM =
+	measure KPI_Select =
 			
 			CALCULATE(
 			    AVERAGE(KPIs_Monthly[KPI_Value]),
 			    DATESINPERIOD(
 			        'Date Table'[Date],
 			        MAX(KPIs_Monthly[YearMonth]),
-			        -12,
+			        SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
 			        MONTH
 			    )
 			)

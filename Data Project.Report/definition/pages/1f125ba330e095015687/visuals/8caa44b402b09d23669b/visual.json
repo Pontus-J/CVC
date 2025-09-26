@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "8acc67a42294b20590d3",
+  "name": "8caa44b402b09d23669b",
   "position": {
-    "x": 751.84275184275191,
-    "y": 153.02211302211302,
+    "x": 0,
+    "y": 334.34889434889436,
     "z": 2000,
-    "height": 315.77395577395578,
-    "width": 236.16707616707617
+    "height": 173.36609336609337,
+    "width": 214.93857493857493
   },
   "visual": {
     "visualType": "listSlicer",
@@ -183,7 +183,7 @@
                             },
                             {
                               "Literal": {
-                                "Value": "'March'"
+                                "Value": "'June'"
                               }
                             }
                           ]
@@ -252,7 +252,7 @@
                                 "1": [
                                   {
                                     "Literal": {
-                                      "Value": "'March'"
+                                      "Value": "'June'"
                                     }
                                   }
                                 ]
@@ -289,7 +289,7 @@
                         "valueMap": [
                           {
                             "0": "2023",
-                            "1": "March"
+                            "1": "June"
                           }
                         ]
                       }
@@ -308,6 +308,13 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
                 }
               }
             }
@@ -410,59 +417,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1738c37f07ac7002361c",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Date Table"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c913b1df70b39d2b86ba",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Date Table"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Month"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

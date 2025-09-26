@@ -9912,6 +9912,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "Revenue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -9934,6 +9944,16 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "EBITDA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9963,6 +9983,16 @@ cultureInfo en-US
 			          "margin latest": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "EBITDA Margin": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -10076,6 +10106,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.499
 			          }
+			        },
+			        {
+			          "CashFromOps": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10099,38 +10139,48 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Capex": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "measure_table.revenue_LTM": {
+			    "measure_table.revenue_select": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Revenue_LTM"
+			          "ConceptualProperty": "Revenue_Select"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "revenue LTM": {
+			          "revenue select": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Revenue_LTM": {
+			          "Revenue_Select": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "LTM": {
+			          "select": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "income ltm": {
+			          "income select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10140,7 +10190,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "profit ltm": {
+			          "profit select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10150,7 +10200,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "turnover ltm": {
+			          "turnover select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10160,13 +10210,73 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "yield ltm": {
+			          "yield select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "choice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "first-rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "first-class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hand-picked": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "exclusive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "elite": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
 			          }
 			        },
 			        {
@@ -10181,25 +10291,91 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.ebitda_ltm": {
+			    "measure_table.EBITDA_select": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "EBITDA_LTM"
+			          "ConceptualProperty": "EBITDA_Select"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ebitda ltm": {
+			          "EBITDA select": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "EBITDA_LTM": {
+			          "EBITDA_Select": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "select": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "choice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "first-rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "first-class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hand-picked": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "exclusive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "elite": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
 			          }
 			        },
 			        {
@@ -10259,29 +10435,29 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.cash_from_ops_LTM": {
+			    "measure_table.cash_from_ops_select": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "CashFromOps_LTM"
+			          "ConceptualProperty": "CashFromOps_Select"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "cash from ops LTM": {
+			          "cash from ops select": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "CashFromOps_LTM": {
+			          "CashFromOps_Select": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "money from op ltm": {
+			          "money from op select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10291,7 +10467,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "currency from op ltm": {
+			          "currency from op select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10301,7 +10477,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "dough from op ltm": {
+			          "dough from op select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10311,7 +10487,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "coin from op ltm": {
+			          "coin from op select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10321,7 +10497,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "note from op ltm": {
+			          "note from op select": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10342,22 +10518,22 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.capex_LTM": {
+			    "measure_table.capex_select": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Capex_LTM"
+			          "ConceptualProperty": "Capex_Select"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "capex LTM": {
+			          "capex select": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Capex_LTM": {
+			          "Capex_Select": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -13050,22 +13226,22 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.LTM_check": {
+			    "measure_table.select_check": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "LTM_Check"
+			          "ConceptualProperty": "Select_Check"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "LTM check": {
+			          "select check": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "LTM_Check": {
+			          "Select_Check": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -13078,7 +13254,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "ltm cheque": {
+			          "select cheque": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13088,7 +13264,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "ltm checkup": {
+			          "select checkup": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13098,7 +13274,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "ltm inspection": {
+			          "select inspection": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13108,7 +13284,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "ltm payment": {
+			          "select payment": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13158,7 +13334,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "ltm test": {
+			          "select test": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13168,50 +13344,106 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "ltm tick": {
+			          "select tick": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "Months included": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "measure_table.kpi_ltm": {
+			    "measure_table.KPI_select": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "KPI_LTM"
+			          "ConceptualProperty": "KPI_Select"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "kpi ltm": {
+			          "KPI select": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "KPI_LTM": {
+			          "KPI_Select": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "Average Monthly KPI LTM": {
+			          "select": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "choice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "first-rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "first-class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hand-picked": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "exclusive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "elite": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Average Monthly KPI": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -13221,42 +13453,220 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "investment_investment_date_date_hierarchy_has_investment_investment_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        },
-			        "investment.investment_date.month": {
-			          "Target": {
-			            "Entity": "investment.investment_date.month"
-			          }
+			    },
+			    "date_range": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Date Range"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date.date_hierarchy"
+			          "date range": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment range": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
 			            },
-			            "Object": {
-			              "Role": "investment.investment_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_date_hierarchies_have_investment_months"
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period range": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "date variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date series": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date assortment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date collection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date gamut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date choice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date array": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
 			        }
 			      ]
 			    },
+			    "date_range.entity_1_3_or_12_months": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Date Range",
+			          "ConceptualProperty": "1, 3 or 12 months"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "1, 3 or 12 months": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "1, 3 or 12 month": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "1 , 3 12 months": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "1 , 3 12 month": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "12 months": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "12 month": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        }
+			      ]
+			    },
+			    "date_range.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Date Range",
+			          "ConceptualProperty": "Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    }
+			  },
+			  "Relationships": {
 			    "investment_investment_date_date_hierarchy_has_investment_investment_date_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "Investments"
@@ -14041,7 +14451,86 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "KP_is_monthly_has_measure_table_kpi_ltm": {
+			    "date_range_has_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Date Range"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_range": {
+			          "Target": {
+			            "Entity": "date_range"
+			          }
+			        },
+			        "date_range.name": {
+			          "Target": {
+			            "Entity": "date_range.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_range"
+			            },
+			            "Object": {
+			              "Role": "date_range.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_ranges_have_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "date_range"
+			            },
+			            "Name": {
+			              "Role": "date_range.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "names_are_names_IDs_of_date_ranges"
+			        }
+			      ]
+			    },
+			    "date_range_has_entity_1_3_or_12_months": {
+			      "Binding": {
+			        "ConceptualEntity": "Date Range"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_range": {
+			          "Target": {
+			            "Entity": "date_range"
+			          }
+			        },
+			        "date_range.entity_1_3_or_12_months": {
+			          "Target": {
+			            "Entity": "date_range.entity_1_3_or_12_months"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_range"
+			            },
+			            "Object": {
+			              "Role": "date_range.entity_1_3_or_12_months"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_ranges_have_1_3_or_12_months"
+			        }
+			      ]
+			    },
+			    "KP_is_monthly_has_measure_table_KPI_select": {
 			      "Binding": {
 			        "ConceptualEntity": "KPIs_Monthly"
 			      },
@@ -14052,9 +14541,9 @@ cultureInfo en-US
 			            "Entity": "KP_is_monthly"
 			          }
 			        },
-			        "measure_table.kpi_ltm": {
+			        "measure_table.KPI_select": {
 			          "Target": {
-			            "Entity": "measure_table.kpi_ltm"
+			            "Entity": "measure_table.KPI_select"
 			          }
 			        }
 			      },
@@ -14065,16 +14554,16 @@ cultureInfo en-US
 			              "Role": "KP_is_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.kpi_ltm"
+			              "Role": "measure_table.KPI_select"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "KP_is_monthlies_have_kpi_ltm"
+			          "ID": "KP_is_monthlies_have_KPI_select"
 			        }
 			      ]
 			    },
-			    "financials_monthly_has_measure_table_LTM_check": {
+			    "financials_monthly_has_measure_table_select_check": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
 			      },
@@ -14085,9 +14574,9 @@ cultureInfo en-US
 			            "Entity": "financials_monthly"
 			          }
 			        },
-			        "measure_table.LTM_check": {
+			        "measure_table.select_check": {
 			          "Target": {
-			            "Entity": "measure_table.LTM_check"
+			            "Entity": "measure_table.select_check"
 			          }
 			        }
 			      },
@@ -14098,12 +14587,45 @@ cultureInfo en-US
 			              "Role": "financials_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.LTM_check"
+			              "Role": "measure_table.select_check"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "financials_monthlies_have_LTM_check"
+			          "ID": "financials_monthlies_have_select_check"
+			        }
+			      ]
+			    },
+			    "date_range_has_measure_table_select_check": {
+			      "Binding": {
+			        "ConceptualEntity": "Date Range"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_range": {
+			          "Target": {
+			            "Entity": "date_range"
+			          }
+			        },
+			        "measure_table.select_check": {
+			          "Target": {
+			            "Entity": "measure_table.select_check"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_range"
+			            },
+			            "Object": {
+			              "Role": "measure_table.select_check"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_ranges_have_select_check"
 			        }
 			      ]
 			    },
@@ -16417,7 +16939,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "financials_monthly_has_measure_table_capex_LTM": {
+			    "financials_monthly_has_measure_table_capex_select": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
 			      },
@@ -16428,9 +16950,9 @@ cultureInfo en-US
 			            "Entity": "financials_monthly"
 			          }
 			        },
-			        "measure_table.capex_LTM": {
+			        "measure_table.capex_select": {
 			          "Target": {
-			            "Entity": "measure_table.capex_LTM"
+			            "Entity": "measure_table.capex_select"
 			          }
 			        }
 			      },
@@ -16441,16 +16963,16 @@ cultureInfo en-US
 			              "Role": "financials_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.capex_LTM"
+			              "Role": "measure_table.capex_select"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "financials_monthlies_have_capex_LTM"
+			          "ID": "financials_monthlies_have_capex_select"
 			        }
 			      ]
 			    },
-			    "financials_monthly_has_measure_table_cash_from_ops_LTM": {
+			    "financials_monthly_has_measure_table_cash_from_ops_select": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
 			      },
@@ -16461,9 +16983,9 @@ cultureInfo en-US
 			            "Entity": "financials_monthly"
 			          }
 			        },
-			        "measure_table.cash_from_ops_LTM": {
+			        "measure_table.cash_from_ops_select": {
 			          "Target": {
-			            "Entity": "measure_table.cash_from_ops_LTM"
+			            "Entity": "measure_table.cash_from_ops_select"
 			          }
 			        }
 			      },
@@ -16474,12 +16996,12 @@ cultureInfo en-US
 			              "Role": "financials_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.cash_from_ops_LTM"
+			              "Role": "measure_table.cash_from_ops_select"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "financials_monthlies_have_cash_from_ops_LTM"
+			          "ID": "financials_monthlies_have_cash_from_ops_select"
 			        }
 			      ]
 			    },
@@ -16516,7 +17038,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "financials_monthly_has_measure_table_ebitda_ltm": {
+			    "financials_monthly_has_measure_table_EBITDA_select": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
 			      },
@@ -16527,9 +17049,9 @@ cultureInfo en-US
 			            "Entity": "financials_monthly"
 			          }
 			        },
-			        "measure_table.ebitda_ltm": {
+			        "measure_table.EBITDA_select": {
 			          "Target": {
-			            "Entity": "measure_table.ebitda_ltm"
+			            "Entity": "measure_table.EBITDA_select"
 			          }
 			        }
 			      },
@@ -16540,16 +17062,16 @@ cultureInfo en-US
 			              "Role": "financials_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.ebitda_ltm"
+			              "Role": "measure_table.EBITDA_select"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "financials_monthlies_have_ebitda_ltm"
+			          "ID": "financials_monthlies_have_EBITDA_select"
 			        }
 			      ]
 			    },
-			    "financials_monthly_has_measure_table_revenue_LTM": {
+			    "financials_monthly_has_measure_table_revenue_select": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
 			      },
@@ -16560,9 +17082,9 @@ cultureInfo en-US
 			            "Entity": "financials_monthly"
 			          }
 			        },
-			        "measure_table.revenue_LTM": {
+			        "measure_table.revenue_select": {
 			          "Target": {
-			            "Entity": "measure_table.revenue_LTM"
+			            "Entity": "measure_table.revenue_select"
 			          }
 			        }
 			      },
@@ -16573,12 +17095,12 @@ cultureInfo en-US
 			              "Role": "financials_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.revenue_LTM"
+			              "Role": "measure_table.revenue_select"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "financials_monthlies_have_revenue_LTM"
+			          "ID": "financials_monthlies_have_revenue_select"
 			        }
 			      ]
 			    },
@@ -20147,6 +20669,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_date_tables_are_weekend_date_tables"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_date_hierarchy_has_investment_investment_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        },
+			        "investment.investment_date.month": {
+			          "Target": {
+			            "Entity": "investment.investment_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_date_hierarchies_have_investment_months"
 			        }
 			      ]
 			    },

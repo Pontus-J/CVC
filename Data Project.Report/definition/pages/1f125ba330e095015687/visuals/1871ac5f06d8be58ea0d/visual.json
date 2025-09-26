@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "9e2d3d3eac37b2d74c2e",
+  "name": "1871ac5f06d8be58ea0d",
   "position": {
-    "x": 225.21662245800178,
+    "x": 1091.0401378842087,
     "y": 0,
-    "z": 1000,
-    "height": 208.24049513704688,
-    "width": 866.91423519009732
+    "z": 4000,
+    "height": 166.86496226464365,
+    "width": 189.3275533387303,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,73 +23,13 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Revenue_Latest"
+                  "Property": "NetDebt_Latest"
                 }
               },
-              "queryRef": "Measure Table.Revenue_Latest",
-              "nativeQueryRef": "Revenue",
-              "displayName": "Revenue"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "EBITDA_Latest"
-                }
-              },
-              "queryRef": "Measure Table.EBITDA_Latest",
-              "nativeQueryRef": "EBITDA",
-              "displayName": "EBITDA"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "EBITDA_Margin_Latest"
-                }
-              },
-              "queryRef": "Measure Table.EBITDA_Margin_Latest",
-              "nativeQueryRef": "EBITDA Margin",
-              "displayName": "EBITDA Margin",
-              "format": "0%;-0%;0%"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "CashFromOps_Latest"
-                }
-              },
-              "queryRef": "Measure Table.CashFromOps_Latest",
-              "nativeQueryRef": "CashFromOps",
-              "displayName": "CashFromOps"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "Capex_Latest"
-                }
-              },
-              "queryRef": "Measure Table.Capex_Latest",
-              "nativeQueryRef": "Capex",
-              "displayName": "Capex"
+              "queryRef": "Measure Table.NetDebt_Latest",
+              "nativeQueryRef": "NetDebt",
+              "displayName": "NetDebt",
+              "format": "#,0"
             }
           ]
         }
@@ -103,7 +44,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Revenue_Latest"
+                "Property": "NetDebt_Latest"
               }
             },
             "direction": "Descending"
@@ -201,7 +142,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Key Financials Last Month - m EUR '"
+                  "Value": "'BS CB Latest (m EUR) '"
                 }
               }
             }

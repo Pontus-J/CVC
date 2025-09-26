@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "9e2d3d3eac37b2d74c2e",
+  "name": "259c6ec6010abe5d6c50",
   "position": {
-    "x": 225.21662245800178,
+    "x": 214.99908599482933,
     "y": 0,
-    "z": 1000,
-    "height": 208.24049513704688,
-    "width": 866.91423519009732
+    "z": 3000,
+    "height": 166.86496226464365,
+    "width": 876.04105188937922,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,12 +23,13 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Revenue_Latest"
+                  "Property": "Revenue_Select"
                 }
               },
-              "queryRef": "Measure Table.Revenue_Latest",
+              "queryRef": "Measure Table.Revenue_LTM",
               "nativeQueryRef": "Revenue",
-              "displayName": "Revenue"
+              "displayName": "Revenue",
+              "format": "#,0"
             },
             {
               "field": {
@@ -37,12 +39,13 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "EBITDA_Latest"
+                  "Property": "EBITDA_Select"
                 }
               },
-              "queryRef": "Measure Table.EBITDA_Latest",
+              "queryRef": "Measure Table.EBITDA_LTM",
               "nativeQueryRef": "EBITDA",
-              "displayName": "EBITDA"
+              "displayName": "EBITDA",
+              "format": "#,0"
             },
             {
               "field": {
@@ -52,10 +55,10 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "EBITDA_Margin_Latest"
+                  "Property": "EBITDA_Margin_LTM"
                 }
               },
-              "queryRef": "Measure Table.EBITDA_Margin_Latest",
+              "queryRef": "Measure Table.EBITDA_Margin_LTM",
               "nativeQueryRef": "EBITDA Margin",
               "displayName": "EBITDA Margin",
               "format": "0%;-0%;0%"
@@ -68,12 +71,13 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "CashFromOps_Latest"
+                  "Property": "CashFromOps_Select"
                 }
               },
-              "queryRef": "Measure Table.CashFromOps_Latest",
+              "queryRef": "Measure Table.CashFromOps_LTM",
               "nativeQueryRef": "CashFromOps",
-              "displayName": "CashFromOps"
+              "displayName": "CashFromOps",
+              "format": "#,0"
             },
             {
               "field": {
@@ -83,12 +87,13 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Capex_Latest"
+                  "Property": "Capex_Select"
                 }
               },
-              "queryRef": "Measure Table.Capex_Latest",
+              "queryRef": "Measure Table.Capex_LTM",
               "nativeQueryRef": "Capex",
-              "displayName": "Capex"
+              "displayName": "Capex",
+              "format": "0"
             }
           ]
         }
@@ -103,7 +108,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Revenue_Latest"
+                "Property": "Revenue_Select"
               }
             },
             "direction": "Descending"
@@ -201,7 +206,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Key Financials Last Month - m EUR '"
+                  "Value": "'Key Financials - M EUR '"
                 }
               }
             }

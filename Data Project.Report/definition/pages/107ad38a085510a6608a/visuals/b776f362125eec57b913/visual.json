@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "b776f362125eec57b913",
   "position": {
-    "x": 11.317418213969939,
+    "x": 0,
     "y": 0,
     "z": 3000,
-    "height": 153.91688770999116,
-    "width": 1031.0167992926615,
+    "height": 153.02211302211302,
+    "width": 1049.0417690417692,
     "tabOrder": 1000
   },
   "visual": {
@@ -23,7 +23,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Revenue_LTM"
+                  "Property": "Revenue_Select"
                 }
               },
               "queryRef": "Measure Table.Revenue_LTM",
@@ -39,7 +39,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "EBITDA_LTM"
+                  "Property": "EBITDA_Select"
                 }
               },
               "queryRef": "Measure Table.EBITDA_LTM",
@@ -71,7 +71,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "CashFromOps_LTM"
+                  "Property": "CashFromOps_Select"
                 }
               },
               "queryRef": "Measure Table.CashFromOps_LTM",
@@ -87,7 +87,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Capex_LTM"
+                  "Property": "Capex_Select"
                 }
               },
               "queryRef": "Measure Table.Capex_LTM",
@@ -108,7 +108,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Revenue_LTM"
+                "Property": "Revenue_Select"
               }
             },
             "direction": "Descending"
@@ -206,7 +206,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Company Overview LTM - m EUR '"
+                  "Value": "'Key Financials - M EUR '"
                 }
               }
             }

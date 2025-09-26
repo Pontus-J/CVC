@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "afda5d0e993e30e79854",
   "position": {
-    "x": 354.23519009725908,
-    "y": 485.51724137931035,
+    "x": 11.676168757126568,
+    "y": 486.02052451539339,
     "z": 9000,
-    "height": 221.82139699381079,
-    "width": 236.53404067197172,
+    "height": 221.84720638540477,
+    "width": 353.20410490307864,
     "tabOrder": 8000
   },
   "visual": {
@@ -100,6 +100,20 @@
               "queryRef": "Companies.HQ_City",
               "nativeQueryRef": "HQ City",
               "displayName": "HQ City"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Companies"
+                    }
+                  },
+                  "Property": "Website"
+                }
+              },
+              "queryRef": "Companies.Website",
+              "nativeQueryRef": "Website"
             }
           ]
         }
