@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "2c8a1c65e51e478ac9c5",
+  "position": {
+    "x": 919.92857142857144,
+    "y": 750.07653061224494,
+    "z": 8000,
+    "height": 221.92346938775509,
+    "width": 223.16326530612244,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Investments"
+                    }
+                  },
+                  "Property": "FundID"
+                }
+              },
+              "queryRef": "Investments.FundID",
+              "nativeQueryRef": "FundID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Investments"
+                    }
+                  },
+                  "Property": "OwnershipType"
+                }
+              },
+              "queryRef": "Investments.OwnershipType",
+              "nativeQueryRef": "OwnershipType"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Investments"
+                    }
+                  },
+                  "Property": "InvestmentDate"
+                }
+              },
+              "queryRef": "Investments.InvestmentDate",
+              "nativeQueryRef": "InvestmentDate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Investments"
+                  }
+                },
+                "Property": "FundID"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fund Involved'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

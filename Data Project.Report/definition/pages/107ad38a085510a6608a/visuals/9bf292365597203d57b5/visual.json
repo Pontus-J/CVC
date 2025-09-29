@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "9bf292365597203d57b5",
   "position": {
-    "x": 364.88027366020521,
-    "y": 486.02052451539339,
-    "z": 10000,
-    "height": 221.84720638540477,
-    "width": 223.30672748004559,
-    "tabOrder": 11000
+    "x": 1318.75,
+    "y": 736.25,
+    "z": 6000,
+    "height": 222.5,
+    "width": 398.75,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "multiRowCard",
@@ -120,6 +120,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'Fund Involved'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             }

@@ -13664,273 +13664,1015 @@ cultureInfo en-US
 			        }
 			      ],
 			      "NameType": "Name"
+			    },
+			    "measure_table.revenue_KPI_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Revenue_KPI_Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue KPI trend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Revenue_KPI_Trend": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "trend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "KPI trend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income kpi trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "profit kpi trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "turnover kpi trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield kpi trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "revenue kpi tendency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "revenue kpi inclination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "revenue kpi movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "revenue kpi development": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "kpi tendency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kpi inclination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.start_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "StartDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "start date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "StartDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "start moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "start period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "commencement date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "inception date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "kickoff date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "beginning date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "initiation date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "launch date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "kick off date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "measure_table.end_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EndDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EndDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "end moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "end period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "culmination date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "completion date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "conclusion date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "expiration date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "cease date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "end time": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "close date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finish date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "measure_table.revenue_chart": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "RevenueChart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue chart": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RevenueChart": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "income chart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "profit chart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover chart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield chart": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "revenue diagram": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "revenue plan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "revenue graph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "revenue table": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "revenue map": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_chart": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDAChart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA chart": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDAChart": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ebitda diagram": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ebitda plan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ebitda graph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ebitda table": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ebitda map": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "date_dummy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DateDummy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date dummy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DateDummy": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dummy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "moment dummy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period dummy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "imitation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mock": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "replica": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "date mannequin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "mannequin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "date model": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "date figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "date_dummy.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DateDummy",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date_dummy.date.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DateDummy",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date_dummy.date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DateDummy",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date_dummy.date.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DateDummy",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date_dummy.date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DateDummy",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date_dummy.date.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DateDummy",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
-			    "investment_investment_date_date_hierarchy_has_investment_investment_date_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        },
-			        "investment.investment_date.quarter": {
-			          "Target": {
-			            "Entity": "investment.investment_date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_date_hierarchies_have_investment_quarters"
-			        }
-			      ]
-			    },
-			    "investment_investment_date_date_hierarchy_has_investment_investment_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        },
-			        "investment.investment_date.year": {
-			          "Target": {
-			            "Entity": "investment.investment_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_date_hierarchies_have_investment_years"
-			        }
-			      ]
-			    },
-			    "investment_investment_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date": {
-			          "Target": {
-			            "Entity": "investment.investment_date"
-			          }
-			        },
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_dates_have_investment_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.day": {
-			          "Target": {
-			            "Entity": "comment.comment_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_days"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.month": {
-			          "Target": {
-			            "Entity": "comment.comment_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_months"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.quarter": {
-			          "Target": {
-			            "Entity": "comment.comment_date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_quarters"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.year": {
-			          "Target": {
-			            "Entity": "comment.comment_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_years"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date": {
-			          "Target": {
-			            "Entity": "comment.comment_date"
-			          }
-			        },
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_dates_have_comment_date_hierarchies"
-			        }
-			      ]
-			    },
 			    "budget_monthly_has_date_table": {
 			      "Binding": {
 			        "ConceptualEntity": "Budget_Monthly"
@@ -14448,6 +15190,204 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "companies_have_annual_budgets"
+			        }
+			      ]
+			    },
+			    "date_dummy_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy": {
+			          "Target": {
+			            "Entity": "date_dummy"
+			          }
+			        },
+			        "date_dummy.date": {
+			          "Target": {
+			            "Entity": "date_dummy.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy"
+			            },
+			            "Object": {
+			              "Role": "date_dummy.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_dummies_have_dates"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_EBITDA_chart": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_chart": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_chart"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_chart"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_EBITDA_chart"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_revenue_chart": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.revenue_chart": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_chart"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_chart"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_revenue_chart"
+			        }
+			      ]
+			    },
+			    "date_dummy_has_measure_table_end_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy": {
+			          "Target": {
+			            "Entity": "date_dummy"
+			          }
+			        },
+			        "measure_table.end_date": {
+			          "Target": {
+			            "Entity": "measure_table.end_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy"
+			            },
+			            "Object": {
+			              "Role": "measure_table.end_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_dummies_have_end_date"
+			        }
+			      ]
+			    },
+			    "date_dummy_has_measure_table_start_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy": {
+			          "Target": {
+			            "Entity": "date_dummy"
+			          }
+			        },
+			        "measure_table.start_date": {
+			          "Target": {
+			            "Entity": "measure_table.start_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy"
+			            },
+			            "Object": {
+			              "Role": "measure_table.start_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_dummies_have_start_date"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_revenue_KPI_trend": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.revenue_KPI_trend": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_KPI_trend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_KPI_trend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_revenue_KPI_trend"
 			        }
 			      ]
 			    },
@@ -20454,6 +21394,90 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "date_dummy_is_ended_on_measure_table_end_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy": {
+			          "Target": {
+			            "Entity": "date_dummy"
+			          }
+			        },
+			        "measure_table.end_date": {
+			          "Target": {
+			            "Entity": "measure_table.end_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "measure_table.end_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "end": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "date_dummy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "date_dummies_are_ended_on_end_date"
+			        }
+			      ]
+			    },
+			    "date_dummy_is_started_on_measure_table_start_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy": {
+			          "Target": {
+			            "Entity": "date_dummy"
+			          }
+			        },
+			        "measure_table.start_date": {
+			          "Target": {
+			            "Entity": "measure_table.start_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "measure_table.start_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "start": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "date_dummy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "date_dummies_are_started_on_start_date"
+			        }
+			      ]
+			    },
 			    "financials_monthly_is_maxed_on_measure_table_max_date": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
@@ -20669,6 +21693,270 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_date_tables_are_weekend_date_tables"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date": {
+			          "Target": {
+			            "Entity": "comment.comment_date"
+			          }
+			        },
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_dates_have_comment_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.year": {
+			          "Target": {
+			            "Entity": "comment.comment_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_years"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.quarter": {
+			          "Target": {
+			            "Entity": "comment.comment_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_quarters"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.month": {
+			          "Target": {
+			            "Entity": "comment.comment_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_months"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.day": {
+			          "Target": {
+			            "Entity": "comment.comment_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_days"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date": {
+			          "Target": {
+			            "Entity": "investment.investment_date"
+			          }
+			        },
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_dates_have_investment_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_date_hierarchy_has_investment_investment_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        },
+			        "investment.investment_date.year": {
+			          "Target": {
+			            "Entity": "investment.investment_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_date_hierarchies_have_investment_years"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_date_hierarchy_has_investment_investment_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        },
+			        "investment.investment_date.quarter": {
+			          "Target": {
+			            "Entity": "investment.investment_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_date_hierarchies_have_investment_quarters"
 			        }
 			      ]
 			    },
@@ -20900,6 +22188,171 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    },
+			    "date_dummy_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy.date": {
+			          "Target": {
+			            "Entity": "date_dummy.date"
+			          }
+			        },
+			        "date_dummy.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_dummy.date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy.date"
+			            },
+			            "Object": {
+			              "Role": "date_dummy.date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "date_dummy_date_date_hierarchy_has_date_dummy_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_dummy.date.date_hierarchy"
+			          }
+			        },
+			        "date_dummy.date.year": {
+			          "Target": {
+			            "Entity": "date_dummy.date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "date_dummy.date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years1"
+			        }
+			      ]
+			    },
+			    "date_dummy_date_date_hierarchy_has_date_dummy_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_dummy.date.date_hierarchy"
+			          }
+			        },
+			        "date_dummy.date.quarter": {
+			          "Target": {
+			            "Entity": "date_dummy.date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "date_dummy.date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters1"
+			        }
+			      ]
+			    },
+			    "date_dummy_date_date_hierarchy_has_date_dummy_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_dummy.date.date_hierarchy"
+			          }
+			        },
+			        "date_dummy.date.month": {
+			          "Target": {
+			            "Entity": "date_dummy.date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "date_dummy.date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months1"
+			        }
+			      ]
+			    },
+			    "date_dummy_date_date_hierarchy_has_date_dummy_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DateDummy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_dummy.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_dummy.date.date_hierarchy"
+			          }
+			        },
+			        "date_dummy.date.day": {
+			          "Target": {
+			            "Entity": "date_dummy.date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_dummy.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "date_dummy.date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days1"
 			        }
 			      ]
 			    }

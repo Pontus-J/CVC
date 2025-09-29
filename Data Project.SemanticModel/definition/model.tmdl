@@ -36,6 +36,8 @@ ref table SeasonalWeights
 ref table Budget_Monthly
 ref table 'Measure Table'
 ref table 'Date Range'
+ref table DateDummy
+ref table LocalDateTable_370fd5d4-0c83-49b1-bb84-a087bfe201dd
 
 ref cultureInfo en-US
 

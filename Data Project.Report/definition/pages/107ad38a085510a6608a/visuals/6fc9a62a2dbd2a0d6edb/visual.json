@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "6fc9a62a2dbd2a0d6edb",
   "position": {
-    "x": 588.1870011402508,
-    "y": 604.24173318129988,
-    "z": 7000,
-    "height": 103.62599771949829,
-    "width": 683.05587229190417,
-    "tabOrder": 7000
+    "x": 503.75,
+    "y": 766.25,
+    "z": 4000,
+    "height": 162.5,
+    "width": 720,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "tableEx",
@@ -55,7 +55,8 @@
                 }
               },
               "queryRef": "Comments.CommentDate",
-              "nativeQueryRef": "CommentDate",
+              "nativeQueryRef": "Date",
+              "displayName": "Date",
               "format": "d"
             },
             {
@@ -88,7 +89,7 @@
                 "Property": "Comment"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -142,7 +143,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -150,6 +151,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'Comments'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             }

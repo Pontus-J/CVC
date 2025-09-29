@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "8acc67a42294b20590d3",
+  "name": "18820250170a86a8d1b6",
   "position": {
-    "x": 751.84275184275191,
-    "y": 153.02211302211302,
+    "x": 0,
+    "y": 752.66787658802173,
     "z": 2000,
-    "height": 315.77395577395578,
-    "width": 236.16707616707617
+    "height": 219.52813067150635,
+    "width": 349.67695099818508,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "listSlicer",
@@ -162,28 +163,13 @@
                               },
                               "Property": "Year"
                             }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "l"
-                                }
-                              },
-                              "Property": "Month"
-                            }
                           }
                         ],
                         "Values": [
                           [
                             {
                               "Literal": {
-                                "Value": "2023L"
-                              }
-                            },
-                            {
-                              "Literal": {
-                                "Value": "'March'"
+                                "Value": "2024L"
                               }
                             }
                           ]
@@ -213,27 +199,6 @@
                               },
                               "Level": "Year"
                             }
-                          },
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Date Table"
-                                        }
-                                      },
-                                      "Name": "Variation",
-                                      "Property": "Date"
-                                    }
-                                  },
-                                  "Hierarchy": "Date Hierarchy"
-                                }
-                              },
-                              "Level": "Month"
-                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -243,16 +208,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2023L"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'March'"
+                                      "Value": "2024L"
                                     }
                                   }
                                 ]
@@ -271,25 +227,12 @@
                                   "Property": "Year"
                                 }
                               }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_a3e0d1af-eb85-43da-b306-07b23c3dd128"
-                                    }
-                                  },
-                                  "Property": "Month"
-                                }
-                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "2023",
-                            "1": "March"
+                            "0": "2024"
                           }
                         ]
                       }
@@ -410,59 +353,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1738c37f07ac7002361c",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Date Table"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c913b1df70b39d2b86ba",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Date Table"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Month"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

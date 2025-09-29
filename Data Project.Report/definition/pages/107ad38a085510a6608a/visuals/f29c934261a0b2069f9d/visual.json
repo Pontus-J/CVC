@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "f29c934261a0b2069f9d",
   "position": {
-    "x": 222.8202278720068,
-    "y": 152.76323759977194,
+    "x": 0,
+    "y": 0,
     "z": 1000,
-    "height": 313.7970353477765,
-    "width": 307.95895096921322,
-    "tabOrder": 2000
+    "height": 186.25,
+    "width": 360,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -97,7 +97,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'UrbanEats Group GmbH'"
+                                "Value": "'GreenPulse Energy Ltd'"
                               }
                             }
                           ]
@@ -151,6 +151,45 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#20E2D7'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selection:selected"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selection:selected"
+          }
         }
       ]
     },
@@ -196,6 +235,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'1. Select Company'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             }

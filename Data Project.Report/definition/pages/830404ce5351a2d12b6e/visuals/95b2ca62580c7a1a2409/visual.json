@@ -1,39 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "b40d24414d52d7a35790",
+  "name": "95b2ca62580c7a1a2409",
   "position": {
-    "x": 588.1870011402508,
-    "y": 486.02052451539339,
-    "z": 6000,
-    "height": 118.2212086659065,
-    "width": 456.83010262257693,
-    "tabOrder": 6000
+    "x": 1497.6734693877552,
+    "y": 0,
+    "z": 4000,
+    "height": 153.73469387755102,
+    "width": 230.60204081632654,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "KPIs_Monthly"
-                    }
-                  },
-                  "Property": "KPI_Name"
-                }
-              },
-              "queryRef": "KPIs_Monthly.KPI_Name",
-              "nativeQueryRef": "KPI",
-              "active": true,
-              "displayName": "KPI"
-            }
-          ]
-        },
-        "Values": {
+        "Data": {
           "projections": [
             {
               "field": {
@@ -43,12 +23,13 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "KPI_Select"
+                  "Property": "NetDebt_Latest"
                 }
               },
-              "queryRef": "Measure Table.KPI_LTM",
-              "nativeQueryRef": "Average Monthly KPI",
-              "displayName": "Average Monthly KPI"
+              "queryRef": "Measure Table.NetDebt_Latest",
+              "nativeQueryRef": "NetDebt",
+              "displayName": "NetDebt",
+              "format": "#,0"
             }
           ]
         }
@@ -57,56 +38,117 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "KPIs_Monthly"
+                    "Entity": "Measure Table"
                   }
                 },
-                "Property": "KPI_Name"
+                "Property": "NetDebt_Latest"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "subTotals": [
+      "layout": [
         {
           "properties": {
-            "columnSubtotals": {
+            "maxTiles": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "rectangleRoundedCurveCustomStyle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            },
-            "rowSubtotals": {
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "shapeCustomRectangle": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRoundedByPixel'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BS CB Latest - €M'"
                 }
               }
             }
           }
         }
       ],
-      "values": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
       "border": [
         {
           "properties": {
@@ -117,44 +159,17 @@
                 }
               }
             },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
             "radius": {
               "expr": {
                 "Literal": {
                   "Value": "10D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
             },
-            "text": {
+            "width": {
               "expr": {
                 "Literal": {
-                  "Value": "'KPIs'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "3D"
                 }
               }
             }

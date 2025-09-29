@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 224.76624857468641,
-    "z": 4002,
+    "z": 3000,
     "height": 494.77765108323831,
     "width": 303.58038768529076,
-    "tabOrder": 4002
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -208,65 +208,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c2dc159b26a68ea7ec77",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Date Table"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c996cd6d5c99a0a1c852",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Revenue"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "55178aa76069b1b33a05",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "EBITDA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4619b2f32300de170047",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "EBITDA_Margin"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
