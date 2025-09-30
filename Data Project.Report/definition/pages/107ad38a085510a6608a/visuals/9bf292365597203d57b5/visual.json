@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "9bf292365597203d57b5",
   "position": {
-    "x": 1318.75,
-    "y": 736.25,
-    "z": 6000,
-    "height": 222.5,
-    "width": 398.75,
-    "tabOrder": 6000
+    "x": 240,
+    "y": 810,
+    "z": 5000,
+    "height": 162.5,
+    "width": 293.75,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "multiRowCard",
@@ -78,6 +78,21 @@
         ]
       }
     },
+    "objects": {
+      "dataLabels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "border": [
         {
@@ -119,7 +134,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fund Involved'"
+                  "Value": "'Fund(s) Involved'"
                 }
               }
             },

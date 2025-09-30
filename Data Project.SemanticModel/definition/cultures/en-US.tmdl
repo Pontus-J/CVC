@@ -11918,7 +11918,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Revenue_Var_Pct"
+			          "ConceptualProperty": "Revenue_Var_Pct_Selected"
 			        }
 			      },
 			      "State": "Generated",

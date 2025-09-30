@@ -3,11 +3,10 @@
   "name": "f29c934261a0b2069f9d",
   "position": {
     "x": 0,
-    "y": 0,
-    "z": 1000,
+    "y": 168.75,
+    "z": 0,
     "height": 186.25,
-    "width": 360,
-    "tabOrder": 1000
+    "width": 240
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -97,7 +96,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'GreenPulse Energy Ltd'"
+                                "Value": "'NordicFiber AB'"
                               }
                             }
                           ]
@@ -158,8 +157,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#20E2D7'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -178,9 +178,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.2
+                    "Literal": {
+                      "Value": "'#004B87'"
                     }
                   }
                 }
@@ -189,6 +188,58 @@
           },
           "selector": {
             "id": "selection:selected"
+          }
+        }
+      ],
+      "shapeCustomRectangle": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRoundedByPixel'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selection:selected"
+          }
+        }
+      ],
+      "selectionIcon": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

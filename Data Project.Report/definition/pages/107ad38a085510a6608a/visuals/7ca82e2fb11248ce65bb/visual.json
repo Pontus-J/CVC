@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "e0493cd424560d3a87a8",
+  "name": "7ca82e2fb11248ce65bb",
   "position": {
     "x": 0,
-    "y": 0,
-    "z": 11000,
-    "height": 152.49489795918367,
-    "width": 349.62244897959187,
-    "tabOrder": 7000
+    "y": 500,
+    "z": 11003,
+    "height": 181.25,
+    "width": 240,
+    "tabOrder": 11003
   },
   "visual": {
     "visualType": "textbox",
@@ -19,35 +19,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "Select Company",
+                    "value": "Requests for new features? Pontus.Johansson@cvc.com",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontSize": "11pt",
+                      "color": "#ffffff"
                     }
                   }
-                ],
-                "listType": "ordered"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Select nr of months you want of historical financial data",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "ordered"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Choose a month of a year to look back from.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "ordered"
+                ]
               },
               {
                 "textRuns": [
@@ -59,7 +37,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Note that on next page, you'll find slicer 2 & 3 in the \"Filters\" bar, not as a slicer on the page"
+                    "value": "Building Better Businesses is the goal of this dashboard. If you have ideas on how to improve it, I’d love to hear from you.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#ffffff"
+                    }
                   }
                 ]
               }
@@ -69,6 +51,23 @@
       ]
     },
     "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#004B87'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
       "border": [
         {
           "properties": {

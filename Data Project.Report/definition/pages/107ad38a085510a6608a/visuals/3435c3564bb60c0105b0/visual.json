@@ -3,11 +3,11 @@
   "name": "3435c3564bb60c0105b0",
   "position": {
     "x": 0,
-    "y": 212.5,
-    "z": 8000,
+    "y": 352.5,
+    "z": 7000,
     "height": 147.5,
-    "width": 360,
-    "tabOrder": 8000
+    "width": 240,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -59,7 +59,7 @@
             "startDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2024-01-20T00:00:00'"
+                  "Value": "datetime'2024-01-01T00:00:00'"
                 }
               }
             },
@@ -112,7 +112,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "datetime'2024-01-20T00:00:00'"
+                                "Value": "datetime'2024-01-01T00:00:00'"
                               }
                             }
                           }

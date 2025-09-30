@@ -3,11 +3,11 @@
   "name": "7afd7a4c4a6963b09028",
   "position": {
     "x": 1310,
-    "y": 186.25,
-    "z": 10000,
-    "height": 512.5,
+    "y": 262.5,
+    "z": 9000,
+    "height": 710,
     "width": 417.5,
-    "tabOrder": 10000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "lineChart",
@@ -142,7 +142,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#20E2D7'"
+                      "Value": "'#004B87'"
                     }
                   }
                 }
