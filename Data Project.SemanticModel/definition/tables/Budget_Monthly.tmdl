@@ -97,6 +97,13 @@ table Budget_Monthly
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column EBITDA_Margin_Budget = Budget_Monthly[EBITDA_Budget]/Budget_Monthly[Revenue_Budget]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ea502599-a2c1-4f43-9ba6-8cfffcafa4a2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Budget_Monthly = m
 		mode: import
 		queryGroup: 'New Tables'

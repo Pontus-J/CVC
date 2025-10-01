@@ -10291,91 +10291,25 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.EBITDA_select": {
+			    "measure_table.EBITDA_selected": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "EBITDA_Select"
+			          "ConceptualProperty": "EBITDA_Selected"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "EBITDA select": {
+			          "EBITDA selected": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "EBITDA_Select": {
+			          "EBITDA_Selected": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "select": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "choice": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "first-rate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "first-class": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "hand-picked": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "exclusive": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
-			        },
-			        {
-			          "elite": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
 			          }
 			        },
 			        {
@@ -11914,7 +11848,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.revenue_var_pct": {
+			    "measure_table.revenue_var_pct_selected": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
@@ -11924,55 +11858,55 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "revenue var pct": {
+			          "revenue var pct selected": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Revenue_Var_Pct": {
+			          "Revenue_Var_Pct_Selected": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "income var pct": {
+			          "income var pct selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.609
+			            "Weight": 0.617
 			          }
 			        },
 			        {
-			          "profit var pct": {
+			          "profit var pct selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.599
 			          }
 			        },
 			        {
-			          "turnover var pct": {
+			          "turnover var pct selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.599
 			          }
 			        },
 			        {
-			          "yield var pct": {
+			          "yield var pct selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -14670,9 +14604,2041 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "budget_monthly.EBITDA_budget_margin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Budget_Monthly",
+			          "ConceptualProperty": "EBITDA_Margin_Budget"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA budget margin": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Budget_Margin": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "margin": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "budget margin": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ebitda account margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "ebitda cost margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "ebitda finance margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "account margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "cost margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finance margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "ebitda budget boundary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ebitda budget perimeter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ebitda budget periphery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "budget boundary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.revenue_budget_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Revenue_Budget_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue budget selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Revenue_Budget_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "revenue account selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "revenue cost selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "revenue finance selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "income budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "profit budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "turnover budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.revenue_var_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Revenue_Var_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue var selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Revenue_Var_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "income var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "profit var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "turnover var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.revenue_budget_latest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Revenue_Budget_Latest"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue budget latest": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Revenue_Budget_Latest": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "budget latest": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "profit budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "turnover budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "revenue account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "revenue cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "revenue finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.revenue_budget_latest_var": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Revenue_Budget_Latest_Var"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue budget latest var": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Revenue_Budget_Latest_Var": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "latest var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "budget latest var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income budget latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "profit budget latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "turnover budget latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "yield budget latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "revenue account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "revenue cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "revenue finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_budget_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Budget_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA budget selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Budget_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ebitda account selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "ebitda cost selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "ebitda finance selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_VAR_PCT_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_VAR_PCT_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA VAR PCT selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_VAR_PCT_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_var_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Var_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA var selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Var_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_budget_latest_var": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Budget_Latest_Var"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA budget latest var": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Budget_Latest_Var": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "latest var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "budget latest var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ebitda account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "ebitda cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "ebitda finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_budget_latest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Budget_Latest"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA budget latest": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Budget_Latest": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "budget latest": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ebitda account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "ebitda cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "ebitda finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cash_from_ops_budget_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "CashFromOps_Budget_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cash from ops budget selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CashFromOps_Budget_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cash from op account selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "cash from op cost selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "cash from op finance selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "money from op budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "currency from op budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dough from op budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "coin from op budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "note from op budget selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cash_from_ops_var_pct_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "CashFromOps_Var_Pct_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cash from ops var pct selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CashFromOps_Var_Pct_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cash_from_ops_var_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "CashFromOps_Var_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cash from ops var selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CashFromOps_Var_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "money from op var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "currency from op var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dough from op var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "coin from op var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "note from op var selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cash_from_ops_budget_latest_var": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "CashFromOps_Budget_Latest_Var"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cash from ops budget latest var": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CashFromOps_Budget_Latest_Var": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cash_from_ops_budget_latest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "CashFromOps_Budget_Latest"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cash from ops budget latest": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CashFromOps_Budget_Latest": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cash from op account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "cash from op cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "cash from op finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "money from op budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "currency from op budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dough from op budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "coin from op budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "note from op budget latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.capex_budget_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Capex_Budget_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capex budget selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Capex_Budget_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "capex account selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "capex cost selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "capex finance selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.capex_var_pct_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Capex_Var_Pct_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capex var pct selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Capex_Var_Pct_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.capex_var_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Capex_Var_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capex var selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Capex_Var_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.capex_budget_latest_var": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Capex_Budget_Latest_Var"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capex budget latest var": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Capex_Budget_Latest_Var": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "capex account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "capex cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "capex finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.capex_budget_latest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Capex_Budget_Latest"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capex budget latest": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Capex_Budget_Latest": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "capex account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "capex cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "capex finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_budget_margin_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Budget_Margin_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA budget margin selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Budget_Margin_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ebitda account margin selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "ebitda cost margin selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "ebitda finance margin selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "ebitda budget boundary selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ebitda budget perimeter selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ebitda budget periphery selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ebitda budget border selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "ebitda budget brim selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "ebitda budget sideline selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "ebitda budget edge selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_margin_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Margin_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA margin selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Margin_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ebitda boundary selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ebitda perimeter selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ebitda periphery selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ebitda border selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "ebitda brim selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "ebitda sideline selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "ebitda edge selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "ebitda verge selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "ebitda fringe selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "ebitda side selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "EBITDA Margin": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "date_table_date_date_hierarchy_has_date_table_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Date Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_table.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_table.date.date_hierarchy"
+			          }
+			        },
+			        "date_table.date.year": {
+			          "Target": {
+			            "Entity": "date_table.date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_table.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "date_table.date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "date_table_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Date Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_table.date": {
+			          "Target": {
+			            "Entity": "date_table.date"
+			          }
+			        },
+			        "date_table.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_table.date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_table.date"
+			            },
+			            "Object": {
+			              "Role": "date_table.date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_date_hierarchy_has_investment_investment_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        },
+			        "investment.investment_date.day": {
+			          "Target": {
+			            "Entity": "investment.investment_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_date_hierarchies_have_investment_days"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_date_hierarchy_has_investment_investment_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        },
+			        "investment.investment_date.month": {
+			          "Target": {
+			            "Entity": "investment.investment_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_date_hierarchies_have_investment_months"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_date_hierarchy_has_investment_investment_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        },
+			        "investment.investment_date.quarter": {
+			          "Target": {
+			            "Entity": "investment.investment_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_date_hierarchies_have_investment_quarters"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_date_hierarchy_has_investment_investment_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        },
+			        "investment.investment_date.year": {
+			          "Target": {
+			            "Entity": "investment.investment_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_date_hierarchies_have_investment_years"
+			        }
+			      ]
+			    },
+			    "investment_investment_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Investments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment.investment_date": {
+			          "Target": {
+			            "Entity": "investment.investment_date"
+			          }
+			        },
+			        "investment.investment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "investment.investment_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment.investment_date"
+			            },
+			            "Object": {
+			              "Role": "investment.investment_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_dates_have_investment_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.day": {
+			          "Target": {
+			            "Entity": "comment.comment_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_days"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.month": {
+			          "Target": {
+			            "Entity": "comment.comment_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_months"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.quarter": {
+			          "Target": {
+			            "Entity": "comment.comment_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_quarters"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_date_hierarchy_has_comment_comment_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        },
+			        "comment.comment_date.year": {
+			          "Target": {
+			            "Entity": "comment.comment_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_date_hierarchies_have_comment_years"
+			        }
+			      ]
+			    },
+			    "comment_comment_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "comment.comment_date": {
+			          "Target": {
+			            "Entity": "comment.comment_date"
+			          }
+			        },
+			        "comment.comment_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "comment.comment_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "comment.comment_date"
+			            },
+			            "Object": {
+			              "Role": "comment.comment_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "comment_dates_have_comment_date_hierarchies"
+			        }
+			      ]
+			    },
 			    "budget_monthly_has_date_table": {
 			      "Binding": {
 			        "ConceptualEntity": "Budget_Monthly"
@@ -15190,6 +17156,1095 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "companies_have_annual_budgets"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_EBITDA_margin_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_margin_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_margin_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_margin_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_EBITDA_margin_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_budget_margin_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_budget_margin_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_budget_margin_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_budget_margin_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_budget_margin_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_capex_budget_latest": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.capex_budget_latest": {
+			          "Target": {
+			            "Entity": "measure_table.capex_budget_latest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_budget_latest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_capex_budget_latest"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_capex_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.capex_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.capex_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_capex_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_capex_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.capex_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.capex_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_capex_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_capex_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.capex_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.capex_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_capex_var_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_capex_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.capex_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.capex_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_capex_var_selected"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_capex_var_pct_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.capex_var_pct_selected": {
+			          "Target": {
+			            "Entity": "measure_table.capex_var_pct_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_var_pct_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_capex_var_pct_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_capex_var_pct_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.capex_var_pct_selected": {
+			          "Target": {
+			            "Entity": "measure_table.capex_var_pct_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_var_pct_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_capex_var_pct_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_capex_budget_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.capex_budget_selected": {
+			          "Target": {
+			            "Entity": "measure_table.capex_budget_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.capex_budget_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_capex_budget_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_cash_from_ops_budget_latest": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_budget_latest": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_budget_latest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_budget_latest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_cash_from_ops_budget_latest"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_cash_from_ops_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_cash_from_ops_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_cash_from_ops_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_cash_from_ops_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_cash_from_ops_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_cash_from_ops_var_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_cash_from_ops_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_cash_from_ops_var_selected"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_cash_from_ops_var_pct_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_var_pct_selected": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_var_pct_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_var_pct_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_cash_from_ops_var_pct_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_cash_from_ops_var_pct_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_var_pct_selected": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_var_pct_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_var_pct_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_cash_from_ops_var_pct_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_cash_from_ops_budget_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.cash_from_ops_budget_selected": {
+			          "Target": {
+			            "Entity": "measure_table.cash_from_ops_budget_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cash_from_ops_budget_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_cash_from_ops_budget_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_budget_latest": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_budget_latest": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_budget_latest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_budget_latest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_budget_latest"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_EBITDA_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_EBITDA_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_EBITDA_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_EBITDA_var_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_var_selected"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_EBITDA_VAR_PCT_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_VAR_PCT_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_VAR_PCT_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_VAR_PCT_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_EBITDA_VAR_PCT_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_VAR_PCT_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_VAR_PCT_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_VAR_PCT_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_VAR_PCT_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_VAR_PCT_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_budget_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_budget_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_budget_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_budget_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_budget_selected"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_revenue_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.revenue_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_revenue_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_revenue_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.revenue_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_revenue_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_revenue_budget_latest": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.revenue_budget_latest": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_budget_latest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_budget_latest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_revenue_budget_latest"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_revenue_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.revenue_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_revenue_var_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_revenue_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.revenue_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_revenue_var_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_revenue_budget_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.revenue_budget_selected": {
+			          "Target": {
+			            "Entity": "measure_table.revenue_budget_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.revenue_budget_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_revenue_budget_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_EBITDA_budget_margin": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "budget_monthly.EBITDA_budget_margin": {
+			          "Target": {
+			            "Entity": "budget_monthly.EBITDA_budget_margin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "budget_monthly.EBITDA_budget_margin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_budget_margins"
 			        }
 			      ]
 			    },
@@ -16856,7 +19911,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "financials_monthly_has_measure_table_revenue_var_pct": {
+			    "financials_monthly_has_measure_table_revenue_var_pct_selected": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
 			      },
@@ -16867,9 +19922,9 @@ cultureInfo en-US
 			            "Entity": "financials_monthly"
 			          }
 			        },
-			        "measure_table.revenue_var_pct": {
+			        "measure_table.revenue_var_pct_selected": {
 			          "Target": {
-			            "Entity": "measure_table.revenue_var_pct"
+			            "Entity": "measure_table.revenue_var_pct_selected"
 			          }
 			        }
 			      },
@@ -16880,16 +19935,16 @@ cultureInfo en-US
 			              "Role": "financials_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.revenue_var_pct"
+			              "Role": "measure_table.revenue_var_pct_selected"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "financials_monthlies_have_revenue_var_pct"
+			          "ID": "financials_monthlies_have_revenue_var_pct_selected"
 			        }
 			      ]
 			    },
-			    "budget_monthly_has_measure_table_revenue_var_pct": {
+			    "budget_monthly_has_measure_table_revenue_var_pct_selected": {
 			      "Binding": {
 			        "ConceptualEntity": "Budget_Monthly"
 			      },
@@ -16900,9 +19955,9 @@ cultureInfo en-US
 			            "Entity": "budget_monthly"
 			          }
 			        },
-			        "measure_table.revenue_var_pct": {
+			        "measure_table.revenue_var_pct_selected": {
 			          "Target": {
-			            "Entity": "measure_table.revenue_var_pct"
+			            "Entity": "measure_table.revenue_var_pct_selected"
 			          }
 			        }
 			      },
@@ -16913,12 +19968,12 @@ cultureInfo en-US
 			              "Role": "budget_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.revenue_var_pct"
+			              "Role": "measure_table.revenue_var_pct_selected"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "budget_monthlies_have_revenue_var_pct"
+			          "ID": "budget_monthlies_have_revenue_var_pct_selected"
 			        }
 			      ]
 			    },
@@ -17978,7 +21033,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "financials_monthly_has_measure_table_EBITDA_select": {
+			    "financials_monthly_has_measure_table_EBITDA_selected": {
 			      "Binding": {
 			        "ConceptualEntity": "Financials_Monthly"
 			      },
@@ -17989,9 +21044,9 @@ cultureInfo en-US
 			            "Entity": "financials_monthly"
 			          }
 			        },
-			        "measure_table.EBITDA_select": {
+			        "measure_table.EBITDA_selected": {
 			          "Target": {
-			            "Entity": "measure_table.EBITDA_select"
+			            "Entity": "measure_table.EBITDA_selected"
 			          }
 			        }
 			      },
@@ -18002,12 +21057,12 @@ cultureInfo en-US
 			              "Role": "financials_monthly"
 			            },
 			            "Object": {
-			              "Role": "measure_table.EBITDA_select"
+			              "Role": "measure_table.EBITDA_selected"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "financials_monthlies_have_EBITDA_select"
+			          "ID": "financials_monthlies_have_EBITDA_selected"
 			        }
 			      ]
 			    },
@@ -21693,402 +24748,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_date_tables_are_weekend_date_tables"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date": {
-			          "Target": {
-			            "Entity": "comment.comment_date"
-			          }
-			        },
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_dates_have_comment_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.year": {
-			          "Target": {
-			            "Entity": "comment.comment_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_years"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.quarter": {
-			          "Target": {
-			            "Entity": "comment.comment_date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_quarters"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.month": {
-			          "Target": {
-			            "Entity": "comment.comment_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_months"
-			        }
-			      ]
-			    },
-			    "comment_comment_date_date_hierarchy_has_comment_comment_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "Comments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "comment.comment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "comment.comment_date.date_hierarchy"
-			          }
-			        },
-			        "comment.comment_date.day": {
-			          "Target": {
-			            "Entity": "comment.comment_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "comment.comment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "comment.comment_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "comment_date_hierarchies_have_comment_days"
-			        }
-			      ]
-			    },
-			    "investment_investment_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date": {
-			          "Target": {
-			            "Entity": "investment.investment_date"
-			          }
-			        },
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_dates_have_investment_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "investment_investment_date_date_hierarchy_has_investment_investment_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        },
-			        "investment.investment_date.year": {
-			          "Target": {
-			            "Entity": "investment.investment_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_date_hierarchies_have_investment_years"
-			        }
-			      ]
-			    },
-			    "investment_investment_date_date_hierarchy_has_investment_investment_date_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        },
-			        "investment.investment_date.quarter": {
-			          "Target": {
-			            "Entity": "investment.investment_date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_date_hierarchies_have_investment_quarters"
-			        }
-			      ]
-			    },
-			    "investment_investment_date_date_hierarchy_has_investment_investment_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        },
-			        "investment.investment_date.month": {
-			          "Target": {
-			            "Entity": "investment.investment_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_date_hierarchies_have_investment_months"
-			        }
-			      ]
-			    },
-			    "investment_investment_date_date_hierarchy_has_investment_investment_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "Investments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "investment.investment_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "investment.investment_date.date_hierarchy"
-			          }
-			        },
-			        "investment.investment_date.day": {
-			          "Target": {
-			            "Entity": "investment.investment_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "investment.investment_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "investment.investment_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "investment_date_hierarchies_have_investment_days"
-			        }
-			      ]
-			    },
-			    "date_table_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Date Table"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "date_table.date": {
-			          "Target": {
-			            "Entity": "date_table.date"
-			          }
-			        },
-			        "date_table.date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "date_table.date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "date_table.date"
-			            },
-			            "Object": {
-			              "Role": "date_table.date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "date_table_date_date_hierarchy_has_date_table_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Date Table"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "date_table.date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "date_table.date.date_hierarchy"
-			          }
-			        },
-			        "date_table.date.year": {
-			          "Target": {
-			            "Entity": "date_table.date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "date_table.date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "date_table.date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_years"
 			        }
 			      ]
 			    },

@@ -39,7 +39,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "EBITDA_Select"
+                  "Property": "EBITDA_Selected"
                 }
               },
               "queryRef": "Measure Table.EBITDA_LTM",

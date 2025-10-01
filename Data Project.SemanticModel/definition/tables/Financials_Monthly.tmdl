@@ -130,13 +130,12 @@ table Financials_Monthly
 
 	column CashFromOps
 		dataType: double
+		formatString: 0.00
 		lineageTag: dec12562-2f48-49cd-98df-e41ea67c379a
 		summarizeBy: sum
 		sourceColumn: CashFromOps
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Capex
 		dataType: double

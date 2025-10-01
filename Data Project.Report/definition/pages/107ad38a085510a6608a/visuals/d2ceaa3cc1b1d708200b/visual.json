@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "398886bb4a00462a8610",
+  "name": "d2ceaa3cc1b1d708200b",
   "position": {
-    "x": 1620.4132653061224,
-    "y": 101.66326530612245,
-    "z": 11001,
-    "height": 159.93367346938777,
-    "width": 107.86224489795919,
-    "tabOrder": 11001
+    "x": 80.586734693877546,
+    "y": 764.954081632653,
+    "z": 11005,
+    "height": 91.744897959183675,
+    "width": 550.469387755102,
+    "tabOrder": 11005
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Interpolate the net debt value between end of 2023 and 2024, assuming a linear decrease per month to make the end of jan 2023 as much higher as end of dec 2024"
+                    "value": "Make more Blue, fix CVC Style more somehow"
                   }
                 ]
               }

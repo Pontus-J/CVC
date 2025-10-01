@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "1f125ba330e095015687",
-  "displayName": "Company Overview",
-  "displayOption": "FitToPage",
-  "height": 972,
-  "width": 1728
-}

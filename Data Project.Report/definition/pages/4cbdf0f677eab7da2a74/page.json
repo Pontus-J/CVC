@@ -4,5 +4,6 @@
   "displayName": "Budget v Actuals",
   "displayOption": "FitToPage",
   "height": 972,
-  "width": 1728
+  "width": 1728,
+  "visibility": "HiddenInViewMode"
 }

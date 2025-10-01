@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "260cc56365a46103da80",
+  "name": "fdc74870218d8202d1d0",
   "position": {
-    "x": 908.75,
-    "y": 188.75,
-    "z": 11002,
-    "height": 43.75,
-    "width": 243.75,
-    "tabOrder": 11002
+    "x": 631.05612244897964,
+    "y": 22.316326530612244,
+    "z": 11004,
+    "height": 91.744897959183675,
+    "width": 550.469387755102,
+    "tabOrder": 11004
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Fix last versions of measures"
+                    "value": "Check conditional formatting on all"
                   }
                 ]
               }
