@@ -9,6 +9,15 @@
         "page": "1.3.95"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "CY23SU025316727047738027.json",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "2.1.0",
+        "page": "2.0.0"
+      },
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -48,6 +57,22 @@
           "name": "CY24SU10",
           "path": "BaseThemes/CY24SU10.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "CY23SU025316727047738027.json",
+          "path": "CY23SU025316727047738027.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "CVC_Capital_Partners_Logo8450590742601686.png",
+          "path": "CVC_Capital_Partners_Logo8450590742601686.png",
+          "type": "Image"
         }
       ]
     }

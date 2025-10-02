@@ -57,3 +57,8 @@ relationship 5e5f0497-2f0a-8ca4-bc2e-13d98a1430f9
 	fromColumn: Budget_Monthly.Date
 	toColumn: 'Date Table'.Date
 
+relationship 88969e51-1106-4a1c-a139-3d74fa36793c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DateDummy.Date
+	toColumn: LocalDateTable_370fd5d4-0c83-49b1-bb84-a087bfe201dd.Date
+

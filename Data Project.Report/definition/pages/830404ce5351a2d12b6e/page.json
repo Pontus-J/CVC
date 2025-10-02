@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "107ad38a085510a6608a",
-  "displayName": "Executive Summary",
+  "name": "830404ce5351a2d12b6e",
+  "displayName": "Early Design Draft",
   "displayOption": "FitToPage",
-  "height": 1000,
-  "width": 1920,
+  "height": 972,
+  "width": 1728,
   "objects": {
     "background": [
       {
@@ -31,5 +31,6 @@
         }
       }
     ]
-  }
+  },
+  "visibility": "HiddenInViewMode"
 }

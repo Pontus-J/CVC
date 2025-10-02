@@ -48,13 +48,12 @@ table KPIs_Monthly
 
 	column KPI_Value
 		dataType: double
+		formatString: 0.00
 		lineageTag: ff454525-e474-4fe3-a110-6a6eb6037fed
 		summarizeBy: sum
 		sourceColumn: KPI_Value
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition KPIs_Monthly = m
 		mode: import

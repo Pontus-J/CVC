@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "f29c934261a0b2069f9d",
+  "name": "172f1aaeed7c3705d9d5",
   "position": {
     "x": 0,
-    "y": 262.85714285714289,
-    "z": 0,
+    "y": 234.28571428571431,
+    "z": 13000,
     "height": 251.42857142857144,
-    "width": 308.57142857142861,
-    "tabOrder": 10000
+    "width": 350,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -97,7 +97,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'NordicFiber AB'"
+                                "Value": "'UrbanEats Group GmbH'"
                               }
                             }
                           ]

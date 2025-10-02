@@ -1,37 +1,33 @@
 table 'Measure Table'
 	lineageTag: 94e57710-314c-4f6f-945e-70c2548b1fb1
 
-	measure Revenue = SUM(Financials_Monthly[Revenue])
+	measure Revenue = SUM(Financials_Monthly[Revenue])*1000000
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: 7b4413cc-7e41-4533-b475-37d164bca8d4
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure EBITDA = SUM(Financials_Monthly[EBITDA])
+	measure EBITDA = SUM(Financials_Monthly[EBITDA])*1000000
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: 737fe98a-cddd-4e69-b155-631360e54f22
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure EBITDA_Margin = DIVIDE([EBITDA], [Revenue], 0)
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 651f5e54-5eb1-40ef-aded-46b1ea6abee1
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure NetDebt = SUM(Financials_Monthly[NetDebt])
+	measure NetDebt = AVERAGE(Financials_Monthly[NetDebt])*1000000
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: cf6c71ae-a10f-4b55-8c82-6a7e1b6e4a3a
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure CashFromOps = SUM(Financials_Monthly[CashFromOps])
+	measure CashFromOps = SUM(Financials_Monthly[CashFromOps])*1000000
 		lineageTag: febcbd3a-a975-41a7-9a25-6c4c74e6e58d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Capex = SUM(Financials_Monthly[Capex])
+	measure Capex = SUM(Financials_Monthly[Capex])*1000000
 		lineageTag: 95fba31f-4c86-4355-9c5d-3d9ce46646ca
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Revenue_Latest = ```
+	measure Revenue_Latest =
 			
 			CALCULATE(
 			    [Revenue],
@@ -40,11 +36,8 @@ table 'Measure Table'
 			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
 			    )
 			)
-			
-			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: f30f6eca-5a91-41b5-a5e5-3da35e0c118a
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure EBITDA_Latest =
 			
@@ -55,9 +48,8 @@ table 'Measure Table'
 			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
 			    )
 			)
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: 06bfe9c4-97a7-4ad5-affc-c7652495124f
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure EBITDA_Margin_Latest =
 			
@@ -72,18 +64,27 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure NetDebt_Latest =
+	measure NetDebt_Latest = ```
 			
-			CALCULATE(
-			    [NetDebt],
-			    FILTER(
-			        ALL('Date Table'[Date]),
-			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
+			VAR _EndDate = [EndDate]
+			VAR _LastAvailableDate = 
+			    CALCULATE(
+			        MAX('Date Table'[Date]),
+			        FILTER(
+			            'Date Table',
+			            'Date Table'[Date] <= _EndDate &&
+			            NOT ISBLANK([NetDebt])
+			        )
 			    )
-			)
+			RETURN
+			    CALCULATE(
+			        [NetDebt],
+			        'Date Table'[Date] = _LastAvailableDate
+			    )
+			
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: c017cdd6-2aa7-4b39-a26f-2dbdd5ac25b5
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure CashFromOps_Latest =
 			
@@ -94,9 +95,8 @@ table 'Measure Table'
 			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
 			    )
 			)
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: 054ca8e9-9e79-459a-baf4-568a29fa326c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure Capex_Latest =
 			
@@ -107,91 +107,88 @@ table 'Measure Table'
 			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
 			    )
 			)
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: b0de16e5-e742-4f89-a843-6272fae432ea
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Revenue_LTM =
+	measure Revenue_Select = ```
 			
 			CALCULATE(
 			    [Revenue],
-			    DATESINPERIOD(
-			        'Date Table'[Date],
-			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
-			        MONTH
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
 			    )
 			)
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		lineageTag: 9cbdfb2e-7c99-44a3-9308-2487ff0b1edb
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure EBITDA_LTM =
+	measure EBITDA_Selected = ```
 			
 			CALCULATE(
 			    [EBITDA],
-			    DATESINPERIOD(
-			        'Date Table'[Date],
-			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
-			        MONTH
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
 			    )
 			)
+			```
 		lineageTag: 512b135d-0e82-4b67-bae1-d6a9b9254a9f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure EBITDA_Margin_LTM = DIVIDE([EBITDA_LTM], [Revenue_LTM], 0)
+	measure EBITDA_Margin_LTM = DIVIDE([EBITDA_Selected], [Revenue_Select], 0)
 		lineageTag: 5bfcdc15-3d42-4034-b6be-c05319886231
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure CashFromOps_LTM =
+	measure CashFromOps_Select = ```
 			
 			CALCULATE(
 			    [CashFromOps],
-			    DATESINPERIOD(
-			        'Date Table'[Date],
-			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
-			        MONTH
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
 			    )
 			)
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: b296c6b7-4afb-494b-9148-270abcdd7c39
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Capex_LTM =
+	measure Capex_Select = ```
 			
 			CALCULATE(
 			    [Capex],
-			    DATESINPERIOD(
-			        'Date Table'[Date],
-			        MAX(Financials_Monthly[YearMonth]),
-			        -12,
-			        MONTH
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
 			    )
 			)
+			```
 		lineageTag: b6c2019a-953d-481f-b42a-5dbe6c681e98
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Revenue_Budget = SUM(Budget_Monthly[Revenue_Budget])
+	measure Revenue_Budget = SUM(Budget_Monthly[Revenue_Budget])*1000000
 		lineageTag: fae16d99-99cb-4e4d-a381-b53fec9fa122
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure EBITDA_Budget = SUM(Budget_Monthly[EBITDA_Budget])
+	measure EBITDA_Budget = SUM(Budget_Monthly[EBITDA_Budget])*1000000
 		lineageTag: 26b680e6-fd12-4edc-9b26-8f5429866350
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure CashFromOps_Budget = SUM(Budget_Monthly[CashFromOps_Budget])
+	measure CashFromOps_Budget = SUM(Budget_Monthly[CashFromOps_Budget])*1000000
 		lineageTag: 68c4fb44-c1c4-414f-a17c-617c445cc23d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Capex_Budget = SUM(Budget_Monthly[Capex_Budget])
+	measure Capex_Budget = SUM(Budget_Monthly[Capex_Budget])*1000000
 		lineageTag: 6c604891-8f56-4e6d-a5c8-167cd158ed17
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -270,18 +267,16 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Revenue_Var_Pct = DIVIDE([Revenue_Var], [Revenue_Budget], 0)
+	measure Revenue_Var_Pct_Selected = DIVIDE([Revenue_Var_Selected], [Revenue_Budget_Selected], 0)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 8769c35f-5d31-448d-aa0b-8351634eb06d
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure EBITDA_Var_Pct = ```
 			DIVIDE([EBITDA_Var], [EBITDA_Budget], 0)
 			
 			```
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: e8445bac-972a-4a90-9cdb-36f11535463e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure CashFromOps_Var_Pct = DIVIDE([CashFromOps_Var], [CashFromOps_Budget], 0)
 		lineageTag: c1a07377-0cb0-4f74-86da-570622528975
@@ -333,7 +328,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure KPI_Value = SUM(KPIs_Monthly[KPI_Value])
+	measure KPI_Value = AVERAGE(KPIs_Monthly[KPI_Value])
 		lineageTag: d5997a22-97da-43ca-af81-6569e0a4d651
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -347,9 +342,8 @@ table 'Measure Table'
 			        'Date Table'[Date] = MAX(KPIs_Monthly[YearMonth])
 			    )
 			)
+		formatString: #,0.00
 		lineageTag: 74087ea6-e7ef-4bbc-8c51-9e950e0f0fdc
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure Max_Date = MAX(Financials_Monthly[YearMonth])
 		formatString: General Date
@@ -391,6 +385,359 @@ table 'Measure Table'
 	measure Check_YTD_Dec_Equal = [Revenue_Dec_Check] = [Revenue_YTD_Dec_Check]
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: bb786654-be29-4190-af67-5a228c57272a
+
+	measure Select_Check = ```
+			
+			IF(
+			        (VAR MonthsInLTM = 
+			                CALCULATE(
+			                DISTINCTCOUNT(Financials_Monthly[YearMonth]),
+			                DATESINPERIOD(
+			                    'Date Table'[Date],
+			                    MAX(Financials_Monthly[YearMonth]),
+			                    SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
+			                    MONTH
+			                )
+			        )
+			    RETURN MonthsInLTM) = -SELECTEDVALUE('Date Range'[1, 3 or 12 months]),
+			1,
+			0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 22a1ac86-1098-4f2c-b8d1-3fceee52b2cd
+
+	measure KPI_Select = ```
+			
+			CALCULATE(
+			    AVERAGE(KPIs_Monthly[KPI_Value]),
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
+			    )
+			)
+			```
+		formatString: #,0
+		lineageTag: b5178d3c-41c0-41d6-be17-1c05e606091d
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure Revenue_KPI_Trend = ```
+			
+			VAR SelectedCompany = SELECTEDVALUE(Companies[CompanyID])
+			RETURN
+			CALCULATE(
+			    SUM(Financials_Monthly[Revenue]),
+			    Companies[CompanyID] = SelectedCompany,
+			    REMOVEFILTERS('Date Range')
+			)
+			
+			```
+		lineageTag: 9f4be264-d92c-48fa-bbb8-4a497031ac41
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure StartDate = MIN(DateDummy[Date])
+		formatString: General Date
+		lineageTag: 25965470-62f7-45ce-ae34-718e74ba43f9
+
+	measure EndDate = MAX(DateDummy[Date])
+		formatString: General Date
+		lineageTag: 39e0fb62-3e11-4533-b694-5805c3553a21
+
+	measure RevenueChart = ```
+			
+			VAR RevM = DIVIDE([Revenue_Select], 1000000, 0)
+			RETURN
+			    "Revenue - € " & FORMAT(RevM, "0") & "M"
+			
+			```
+		lineageTag: 8eb3393c-e9f0-43b7-a5d0-0c23c900607c
+
+	measure EBITDAChart =
+			
+			VAR RevM = DIVIDE([EBITDA_Selected], 1000000, 0)
+			RETURN
+			    "EBITDA - € " & FORMAT(RevM, "0") & "M"
+		lineageTag: 93bd4b9a-2c00-4bfb-b5fc-e6cefb934a9b
+
+	measure Revenue_Budget_Selected = ```
+			
+			CALCULATE(
+			    [Revenue_Budget],
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
+			    )
+			)
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: c11c654c-39df-4d9d-924a-5645afa29639
+
+	measure Revenue_Var_Selected = [Revenue_Select] - [Revenue_Budget_Selected]
+		lineageTag: 65672073-962b-4acd-aeda-17584c8b8f35
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Revenue_Budget_Latest = ```
+			
+			CALCULATE(
+			    [Revenue_Budget],
+			    FILTER(
+			        ALL('Date Table'[Date]),
+			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
+			    )
+			)
+			
+			```
+		lineageTag: ed3d1950-714b-4c2a-a0b9-da668271d626
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Revenue_Budget_Latest_Var = [Revenue_Latest] - [Revenue_Budget_Latest]
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 5dad3ca8-a9c6-45be-8699-7779df7c6694
+
+	measure EBITDA_Budget_Selected = ```
+			
+			CALCULATE(
+			    [EBITDA_Budget],
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
+			    )
+			)
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 34674027-1b33-4b71-9f75-e154dde2cb04
+
+	measure EBITDA_VAR_PCT_Selected = DIVIDE([EBITDA_Var_Selected], [EBITDA_Budget_Selected], 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 69c6222e-f9b5-4024-8d50-2c496593acae
+
+	measure EBITDA_Var_Selected = [EBITDA_Selected] - [EBITDA_Budget_Selected]
+		formatString: 0
+		lineageTag: dbd5b343-2758-4bb6-b8af-9a23299fa0d9
+
+	measure EBITDA_Budget_Latest_Var = [EBITDA_Latest] - [EBITDA_Budget_Latest]
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: e7c916f4-2007-4a43-a67a-da071ea6ea70
+
+	measure EBITDA_Budget_Latest = ```
+			
+			CALCULATE(
+			    [EBITDA_Budget],
+			    FILTER(
+			        ALL('Date Table'[Date]),
+			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
+			    )
+			)
+			
+			```
+		lineageTag: cb42139a-73e4-4881-bdbc-8a2dc12c9ac2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CashFromOps_Budget_Selected = ```
+			
+			CALCULATE(
+			    [CashFromOps_Budget],
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
+			    )
+			)
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 0e008405-f261-4c65-950b-43ccb072cc49
+
+	measure CashFromOps_Var_Pct_Selected = DIVIDE([cashfromops_Var_Selected], [Revenue_Budget_Selected], 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 69e7c876-3bd1-41fb-804b-cf169e5ccf8d
+
+	measure CashFromOps_Var_Selected = [CashFromOps_Select] - [CashFromOps_Budget_Selected]
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 93e2135a-b35f-4d4a-8150-1a29d6931366
+
+	measure CashFromOps_Budget_Latest_Var = [CashFromOps_Latest] - [cashfromops_Budget_Latest]
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: dc9170b0-f519-40e5-b71c-cb50f795b81d
+
+	measure CashFromOps_Budget_Latest = ```
+			
+			CALCULATE(
+			    [CashFromOps_Budget],
+			    FILTER(
+			        ALL('Date Table'[Date]),
+			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
+			    )
+			)
+			
+			```
+		lineageTag: e55eceda-60c7-48c1-9271-ee399b888f0f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Capex_Budget_Selected = ```
+			
+			CALCULATE(
+			    [Capex_Budget],
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
+			    )
+			)
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 5049f3b2-bb5c-49ff-b366-eef6e8e7739e
+
+	measure Capex_Var_Pct_Selected = DIVIDE([Capex_Var_Selected], [Capex_Budget_Selected], 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 8b4bb5aa-def3-4481-8fde-81c851bce19c
+
+	measure Capex_Var_Selected = [Capex_Select] - [Capex_Budget_Selected]
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: c00cc0ab-d4d4-4ed9-9a92-6fd1b1057c0d
+
+	measure Capex_Budget_Latest_Var = [Capex_Latest] - [Capex_Budget_Latest]
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: b67ed58b-f02e-4d5a-8ccd-22cdd93628dc
+
+	measure Capex_Budget_Latest = ```
+			
+			CALCULATE(
+			    [Capex_Budget],
+			    FILTER(
+			        ALL('Date Table'[Date]),
+			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
+			    )
+			)
+			
+			```
+		lineageTag: b7b4dcb0-e9b1-44c3-9670-fcf0cf42bab1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure EBITDA_Budget_Margin_Selected =
+			
+			VAR _EBITDA = [EBITDA_Budget_Selected]
+			VAR _Revenue = [Revenue_Budget_Selected]
+			RETURN
+			    IF(
+			        NOT(ISBLANK(_Revenue)) && _Revenue <> 0,
+			        DIVIDE(_EBITDA, _Revenue, BLANK()),
+			        BLANK()
+			    )
+		formatString: 0%;-0%;0%
+		lineageTag: 1d63b370-9c9d-4110-8ec1-4220a7b1bd24
+
+	measure EBITDA_Margin_Selected =
+			
+			VAR _EBITDA = [EBITDA_Selected]
+			VAR _Revenue = [Revenue_Select]
+			RETURN
+			    IF(
+			        NOT(ISBLANK(_Revenue)) && _Revenue <> 0,
+			        DIVIDE(_EBITDA, _Revenue, BLANK()),
+			        BLANK()
+			    )
+		formatString: 0%;-0%;0%
+		lineageTag: b79d2d1d-5651-4d55-a7f1-8ea15c70d3e9
+
+	measure EBITDA_Margin_Var_Selected = [EBITDA_Margin_Selected] - [EBITDA_Budget_Margin_Selected]
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 541ab5f3-58f2-4d4b-9ee4-c34a92fe6428
+
+	measure EBITDA_Margin_Budget_Latest_Var = [EBITDA_Margin_Latest] - [EBITDA_Margin_Budget_Latest]
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 3c500e3c-6765-42ff-ada5-95ced8164fc7
+
+	measure EBITDA_Margin_Budget_Latest = ```
+			
+			CALCULATE(
+			    [EBITDA_Margin_Budget],
+			    FILTER(
+			        ALL('Date Table'[Date]),
+			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
+			    )
+			)
+			
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: d0870d19-93b1-481e-9da9-1fb59a3640a8
+
+	measure EBITDA_Margin_Budget = SUM(Budget_Monthly[EBITDA_Margin_Budget])
+		lineageTag: b5ec71e9-42ab-4928-b1ba-bae3bb1a87fc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure NetDebt_Selected = ```
+			
+			CALCULATE(
+			    [NetDebt],
+			    FILTER( 
+			        'Date Table',
+			        'Date Table'[Date] >= [StartDate]
+			        && 'Date Table'[Date] <= [EndDate]
+			    )
+			)
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: d49eb953-ed36-445d-b33c-3ee5d1160f4c
+
+	measure 'EBITDA (LTM)' =
+			
+			CALCULATE(
+			    [EBITDA],
+			    DATESINPERIOD(
+			         'Date Table'[Date],
+			        [EndDate],
+			        -12,
+			        MONTH
+			    )
+			)
+		lineageTag: b4bb7f74-8e33-4b91-bf22-398d50eb2ecf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'NetDebt (LTM)' =
+			
+			CALCULATE(
+			    [NetDebt],
+			    DATESINPERIOD(
+			         'Date Table'[Date],
+			        [EndDate],
+			        -12,
+			        MONTH
+			    )
+			)
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 6423dbab-e5af-4617-8d90-3a35134941cf
+
+	measure NetDebt_EBIDTA_LTM_Ratio = [NetDebt (LTM)]/[EBITDA (LTM)]
+		formatString: 0.0
+		lineageTag: cc3622ce-2625-4af3-8526-4d56cabb371a
+
+	measure KPI_Latest = ```
+			
+			CALCULATE(
+			    [KPI_Value],
+			    FILTER(
+			        ALL('Date Table'[Date]),
+			        'Date Table'[Date] = MAX(Financials_Monthly[YearMonth])
+			    )
+			)
+			
+			```
+		lineageTag: a942ebdb-5904-4735-8c05-62e061d44b94
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column1
 		dataType: string

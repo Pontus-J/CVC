@@ -1,0 +1,27 @@
+table DateDummy
+	lineageTag: 99478294-64b5-4ace-a9b8-2ed53c4ffcdf
+
+	column Date
+		formatString: General Date
+		lineageTag: c679e7ac-6e8e-4f6a-8f95-3e76c5ccc0fb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 88969e51-1106-4a1c-a139-3d74fa36793c
+			defaultHierarchy: LocalDateTable_370fd5d4-0c83-49b1-bb84-a087bfe201dd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DateDummy = calculated
+		mode: import
+		source = ```
+				
+				CALENDAR( DATE(2023, 1, 1), DATE(2024, 12, 1) )
+				
+				```
+
+	annotation PBI_Id = 165f154efd364c6f93a6fbfc588d2dd2
+
