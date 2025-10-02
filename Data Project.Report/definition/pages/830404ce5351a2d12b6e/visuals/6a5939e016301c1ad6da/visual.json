@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "6a5939e016301c1ad6da",
   "position": {
-    "x": 747.9637023593466,
-    "y": 252.4573502722323,
-    "z": 12000,
-    "height": 362.22141560798548,
-    "width": 749.53176043557164,
-    "tabOrder": 8000
+    "x": 572.85714285714289,
+    "y": 162.85714285714286,
+    "z": 11000,
+    "height": 361.42857142857144,
+    "width": 815.71428571428578,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineChart",
@@ -141,6 +141,25 @@
               },
               "queryRef": "Sum(Financials_Monthly.Revenue)",
               "nativeQueryRef": "Sum of Revenue"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Budget_Monthly"
+                        }
+                      },
+                      "Property": "Revenue_Budget"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Budget_Monthly.Revenue_Budget)",
+              "nativeQueryRef": "Sum of Revenue_Budget"
             }
           ]
         }

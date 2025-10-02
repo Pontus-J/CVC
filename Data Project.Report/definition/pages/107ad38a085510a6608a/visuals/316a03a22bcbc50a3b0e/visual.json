@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "316a03a22bcbc50a3b0e",
   "position": {
-    "x": 240,
+    "x": 387.5,
     "y": 0,
-    "z": 10000,
-    "height": 262.5,
-    "width": 1273.75,
-    "tabOrder": 11000
+    "z": 8000,
+    "height": 261.25,
+    "width": 1532.5,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "Measure Table.Revenue_LTM",
-              "nativeQueryRef": "Revenue",
-              "displayName": "Revenue",
+              "nativeQueryRef": "Sum Revenue",
+              "displayName": "Sum Revenue",
               "format": "\"€\" #,0;-\"€\" #,0;\"€\" #,0"
             },
             {
@@ -43,8 +43,8 @@
                 }
               },
               "queryRef": "Measure Table.EBITDA_LTM",
-              "nativeQueryRef": "EBITDA",
-              "displayName": "EBITDA",
+              "nativeQueryRef": "Sum EBITDA",
+              "displayName": "Sum EBITDA",
               "format": "\"€\" #,0;-\"€\" #,0;\"€\" #,0"
             },
             {
@@ -74,8 +74,8 @@
                 }
               },
               "queryRef": "Measure Table.CashFromOps_LTM",
-              "nativeQueryRef": "CashFromOps",
-              "displayName": "CashFromOps",
+              "nativeQueryRef": "Sum CashFromOps",
+              "displayName": "Sum CashFromOps",
               "format": "\"€\" #,0;-\"€\" #,0;\"€\" #,0"
             },
             {
@@ -90,9 +90,24 @@
                 }
               },
               "queryRef": "Measure Table.Capex_LTM",
-              "nativeQueryRef": "Capex",
-              "displayName": "Capex",
+              "nativeQueryRef": "Sum Capex",
+              "displayName": "Sum Capex",
               "format": "\"€\" #,0;-\"€\" #,0;\"€\" #,0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "NetDebt_Selected"
+                }
+              },
+              "queryRef": "Measure Table.NetDebt_Selected",
+              "nativeQueryRef": "Average NetDebt",
+              "displayName": "Average NetDebt"
             }
           ]
         }
@@ -355,6 +370,20 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Revenue_LTM"
           }
         }
       ],
@@ -875,6 +904,109 @@
             "id": "field-ba1b9ede-11b1-0458-c029-8b4fef510899",
             "order": 1
           }
+        },
+        {
+          "properties": {
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.NetDebt_Selected"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "NetDebt_Latest"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-079ed843-3286-5112-6e67-ab22816cd91c",
+            "order": 0
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "NetDebt (LTM)"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-6a344bd4-bbcc-641e-cbd5-30917ebe391e",
+            "order": 1
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "NetDebt_EBIDTA_LTM_Ratio"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-e40fd7c8-c389-6406-73e1-b3b8e6993690",
+            "order": 2
+          }
         }
       ],
       "referenceLabelDetail": [
@@ -1059,7 +1191,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Revenue_Select"
+                                  "Property": "Revenue_Budget_Latest_Var"
                                 }
                               },
                               "Right": {
@@ -1086,7 +1218,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Revenue_Select"
+                                  "Property": "Revenue_Budget_Latest_Var"
                                 }
                               },
                               "Right": {
@@ -1779,7 +1911,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Capex_Select"
+                                  "Property": "Capex_Budget_Latest_Var"
                                 }
                               },
                               "Right": {
@@ -1806,7 +1938,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Capex_Select"
+                                  "Property": "Capex_Budget_Latest_Var"
                                 }
                               },
                               "Right": {
@@ -2274,7 +2406,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Revenue_Select"
+                                  "Property": "Revenue_Var_Pct_Selected"
                                 }
                               },
                               "Right": {
@@ -2301,7 +2433,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Revenue_Select"
+                                  "Property": "Revenue_Var_Pct_Selected"
                                 }
                               },
                               "Right": {
@@ -2525,7 +2657,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Capex_Select"
+                                  "Property": "Capex_Var_Pct_Selected"
                                 }
                               },
                               "Right": {
@@ -2552,7 +2684,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Capex_Select"
+                                  "Property": "Capex_Var_Pct_Selected"
                                 }
                               },
                               "Right": {
@@ -2630,6 +2762,51 @@
           "selector": {
             "metadata": "Measure Table.EBITDA_Margin_Selected",
             "id": "field-ba1b9ede-11b1-0458-c029-8b4fef510899"
+          }
+        },
+        {
+          "properties": {
+            "valueBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-079ed843-3286-5112-6e67-ab22816cd91c"
+          }
+        },
+        {
+          "properties": {
+            "valueBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-6a344bd4-bbcc-641e-cbd5-30917ebe391e"
+          }
+        },
+        {
+          "properties": {
+            "valueBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-e40fd7c8-c389-6406-73e1-b3b8e6993690"
           }
         }
       ],
@@ -2955,6 +3132,79 @@
             "metadata": "Measure Table.EBITDA_Margin_Selected",
             "id": "field-ba1b9ede-11b1-0458-c029-8b4fef510899"
           }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Last Month:'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-079ed843-3286-5112-6e67-ab22816cd91c"
+          }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LTM Avg:'"
+                }
+              }
+            },
+            "titleBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-6a344bd4-bbcc-641e-cbd5-30917ebe391e"
+          }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LTM Ratio to EBITDA:'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.NetDebt_Selected",
+            "id": "field-e40fd7c8-c389-6406-73e1-b3b8e6993690"
+          }
         }
       ]
     },
@@ -2972,7 +3222,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Summarize Key Financials - Selected Dates'"
+                  "Value": "'Summarize Key Financials - Selected Dates (unless stated otherwise)'"
                 }
               }
             },
@@ -3035,65 +3285,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "371c3f990526e408b7c0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Revenue_Select"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d9590a98c3bec7ae7990",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "EBITDA_Selected"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8dc762fbe3873556a023",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "CashFromOps_Select"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "340d6368159bd076755d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Capex_Select"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

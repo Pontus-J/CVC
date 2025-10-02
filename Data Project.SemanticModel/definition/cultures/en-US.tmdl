@@ -10280,6 +10280,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "Sum Revenue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Revenue": {
 			            "State": "Suggested",
 			            "Source": {
@@ -10310,6 +10320,16 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Sum EBITDA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -10441,6 +10461,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "Sum CashFromOps": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "CashFromOps": {
 			            "State": "Suggested",
 			            "Source": {
@@ -10471,6 +10501,16 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Sum Capex": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -14605,7 +14645,7 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "budget_monthly.EBITDA_budget_margin": {
+			    "budget_monthly.EBITDA_margin_budget": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Budget_Monthly",
@@ -14615,127 +14655,117 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "EBITDA budget margin": {
+			          "EBITDA margin budget": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "EBITDA_Budget_Margin": {
+			          "EBITDA_Margin_Budget": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "margin": {
+			          "budget": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "budget margin": {
+			          "margin budget": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "ebitda account margin": {
+			          "ebitda margin account": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.739
 			          }
 			        },
 			        {
-			          "ebitda cost margin": {
+			          "ebitda margin cost": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.739
 			          }
 			        },
 			        {
-			          "ebitda finance margin": {
+			          "ebitda margin finance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.739
 			          }
 			        },
 			        {
-			          "account margin": {
+			          "margin account": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.727
 			          }
 			        },
 			        {
-			          "cost margin": {
+			          "margin cost": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.727
 			          }
 			        },
 			        {
-			          "finance margin": {
+			          "margin finance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.727
 			          }
 			        },
 			        {
-			          "ebitda budget boundary": {
+			          "account": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.714
 			          }
 			        },
 			        {
-			          "ebitda budget perimeter": {
+			          "cost": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.714
 			          }
 			        },
 			        {
-			          "ebitda budget periphery": {
+			          "finance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "budget boundary": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
+			            "Weight": 0.714
 			          }
 			        }
 			      ]
@@ -16240,9 +16270,756 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "measure_table.EBITDA_margin_var_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Margin_Var_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA margin var selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Margin_Var_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_margin_budget_latest_var": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Margin_Budget_Latest_Var"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA margin budget latest var": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Margin_Budget_Latest_Var": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "latest var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "budget latest var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "margin budget latest var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ebitda margin account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "ebitda margin cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "ebitda margin finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "margin account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "margin cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "margin finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "account latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cost latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finance latest var": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_margin_budget_latest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Margin_Budget_Latest"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA margin budget latest": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Margin_Budget_Latest": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "budget latest": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "margin budget latest": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ebitda margin account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "ebitda margin cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "ebitda margin finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "margin account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "margin cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "margin finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "account latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "cost latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finance latest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.EBITDA_margin_budget": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA_Margin_Budget"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "EBITDA margin budget": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EBITDA_Margin_Budget": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "budget": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "margin budget": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ebitda margin account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "ebitda margin cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "ebitda margin finance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "margin account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "margin cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "margin finance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "finance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.net_debt_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "NetDebt_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "net debt selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NetDebt_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "net obligation selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "net duty selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "net responsibility selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "net liability selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "net commitment selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "net debit selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "net balance selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "net bill selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Average NetDebt": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.ebitda_ltm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "EBITDA (LTM)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ebitda (ltm)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ebitda": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.NetDebt_LTM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "NetDebt (LTM)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "NetDebt (LTM)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NetDebt": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.net_debt_EBIDTA_LTM_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "NetDebt_EBIDTA_LTM_Ratio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "net debt EBIDTA LTM ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NetDebt_EBIDTA_LTM_Ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "LTM ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "EBIDTA LTM ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "debt EBIDTA LTM ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "net debt ebidta ltm relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "net debt ebidta ltm percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "net debt ebidta ltm quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "net debt ebidta ltm relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "debt ebidta ltm relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "debt ebidta ltm percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "debt ebidta ltm quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "debt ebidta ltm relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ebidta ltm relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ebidta ltm percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "date_table_date_date_hierarchy_has_date_table_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Date Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date_table.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "date_table.date.date_hierarchy"
+			          }
+			        },
+			        "date_table.date.quarter": {
+			          "Target": {
+			            "Entity": "date_table.date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date_table.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "date_table.date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters"
+			        }
+			      ]
+			    },
 			    "date_table_date_date_hierarchy_has_date_table_date_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Date Table"
@@ -17156,6 +17933,336 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "companies_have_annual_budgets"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_net_debt_EBIDTA_LTM_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.net_debt_EBIDTA_LTM_ratio": {
+			          "Target": {
+			            "Entity": "measure_table.net_debt_EBIDTA_LTM_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.net_debt_EBIDTA_LTM_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_net_debt_EBIDTA_LTM_ratio"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_NetDebt_LTM": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.NetDebt_LTM": {
+			          "Target": {
+			            "Entity": "measure_table.NetDebt_LTM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.NetDebt_LTM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_NetDebt_LTM"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_ebitda_ltm": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.ebitda_ltm": {
+			          "Target": {
+			            "Entity": "measure_table.ebitda_ltm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.ebitda_ltm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_ebitda_ltm"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_net_debt_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.net_debt_selected": {
+			          "Target": {
+			            "Entity": "measure_table.net_debt_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.net_debt_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_net_debt_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_margin_budget": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_margin_budget": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_margin_budget"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_margin_budget"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_margin_budget"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_margin_budget_latest": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_margin_budget_latest": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_margin_budget_latest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_margin_budget_latest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_margin_budget_latest"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_EBITDA_margin_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_margin_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_margin_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_margin_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_EBITDA_margin_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_margin_budget_latest_var": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_margin_budget_latest_var": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_margin_budget_latest_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_margin_budget_latest_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_margin_budget_latest_var"
+			        }
+			      ]
+			    },
+			    "financials_monthly_has_measure_table_EBITDA_margin_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Financials_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials_monthly": {
+			          "Target": {
+			            "Entity": "financials_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_margin_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_margin_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_margin_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "financials_monthlies_have_EBITDA_margin_var_selected"
+			        }
+			      ]
+			    },
+			    "budget_monthly_has_measure_table_EBITDA_margin_var_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget_Monthly"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget_monthly": {
+			          "Target": {
+			            "Entity": "budget_monthly"
+			          }
+			        },
+			        "measure_table.EBITDA_margin_var_selected": {
+			          "Target": {
+			            "Entity": "measure_table.EBITDA_margin_var_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget_monthly"
+			            },
+			            "Object": {
+			              "Role": "measure_table.EBITDA_margin_var_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_monthlies_have_EBITDA_margin_var_selected"
 			        }
 			      ]
 			    },
@@ -18215,7 +19322,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "budget_monthly_has_EBITDA_budget_margin": {
+			    "budget_monthly_has_EBITDA_margin_budget": {
 			      "Binding": {
 			        "ConceptualEntity": "Budget_Monthly"
 			      },
@@ -18226,9 +19333,9 @@ cultureInfo en-US
 			            "Entity": "budget_monthly"
 			          }
 			        },
-			        "budget_monthly.EBITDA_budget_margin": {
+			        "budget_monthly.EBITDA_margin_budget": {
 			          "Target": {
-			            "Entity": "budget_monthly.EBITDA_budget_margin"
+			            "Entity": "budget_monthly.EBITDA_margin_budget"
 			          }
 			        }
 			      },
@@ -18239,12 +19346,12 @@ cultureInfo en-US
 			              "Role": "budget_monthly"
 			            },
 			            "Object": {
-			              "Role": "budget_monthly.EBITDA_budget_margin"
+			              "Role": "budget_monthly.EBITDA_margin_budget"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "budget_monthlies_have_EBITDA_budget_margins"
+			          "ID": "budget_monthlies_have_EBITDA_margin_budgets"
 			        }
 			      ]
 			    },
@@ -24748,39 +25855,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_date_tables_are_weekend_date_tables"
-			        }
-			      ]
-			    },
-			    "date_table_date_date_hierarchy_has_date_table_date_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Date Table"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "date_table.date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "date_table.date.date_hierarchy"
-			          }
-			        },
-			        "date_table.date.quarter": {
-			          "Target": {
-			            "Entity": "date_table.date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "date_table.date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "date_table.date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_quarters"
 			        }
 			      ]
 			    },

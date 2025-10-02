@@ -3,11 +3,11 @@
   "name": "7ca82e2fb11248ce65bb",
   "position": {
     "x": 0,
-    "y": 500,
-    "z": 11003,
-    "height": 181.25,
-    "width": 240,
-    "tabOrder": 11003
+    "y": 661.25,
+    "z": 10000,
+    "height": 146.25,
+    "width": 308.75,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "textbox",
@@ -21,7 +21,6 @@
                   {
                     "value": "Requests for new features? Pontus.Johansson@cvc.com",
                     "textStyle": {
-                      "fontSize": "11pt",
                       "color": "#ffffff"
                     }
                   }
@@ -39,7 +38,6 @@
                   {
                     "value": "Building Better Businesses is the goal of this dashboard. If you have ideas on how to improve it, I’d love to hear from you.",
                     "textStyle": {
-                      "fontSize": "11pt",
                       "color": "#ffffff"
                     }
                   }

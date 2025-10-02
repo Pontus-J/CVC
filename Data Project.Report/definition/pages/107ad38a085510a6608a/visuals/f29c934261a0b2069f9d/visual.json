@@ -3,10 +3,11 @@
   "name": "f29c934261a0b2069f9d",
   "position": {
     "x": 0,
-    "y": 168.75,
+    "y": 262.85714285714289,
     "z": 0,
-    "height": 186.25,
-    "width": 240
+    "height": 251.42857142857144,
+    "width": 308.57142857142861,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -96,7 +97,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'GreenPulse Energy Ltd'"
+                                "Value": "'NordicFiber AB'"
                               }
                             }
                           ]

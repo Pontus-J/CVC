@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "afda5d0e993e30e79854",
   "position": {
-    "x": 0,
-    "y": 681.25,
-    "z": 4000,
-    "height": 291.25,
-    "width": 240,
-    "tabOrder": 3000
+    "x": 308.75,
+    "y": 842.5,
+    "z": 2000,
+    "height": 157.5,
+    "width": 357.5,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "multiRowCard",
@@ -156,6 +156,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             }

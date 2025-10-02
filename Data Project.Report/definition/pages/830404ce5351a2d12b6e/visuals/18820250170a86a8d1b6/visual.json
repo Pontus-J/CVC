@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 752.66787658802173,
-    "z": 2000,
+    "z": 1000,
     "height": 219.52813067150635,
     "width": 349.67695099818508,
-    "tabOrder": 11000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "listSlicer",
@@ -163,28 +163,13 @@
                               },
                               "Property": "Year"
                             }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "l"
-                                }
-                              },
-                              "Property": "Month"
-                            }
                           }
                         ],
                         "Values": [
                           [
                             {
                               "Literal": {
-                                "Value": "2023L"
-                              }
-                            },
-                            {
-                              "Literal": {
-                                "Value": "'March'"
+                                "Value": "2024L"
                               }
                             }
                           ]
@@ -214,27 +199,6 @@
                               },
                               "Level": "Year"
                             }
-                          },
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Date Table"
-                                        }
-                                      },
-                                      "Name": "Variation",
-                                      "Property": "Date"
-                                    }
-                                  },
-                                  "Hierarchy": "Date Hierarchy"
-                                }
-                              },
-                              "Level": "Month"
-                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -244,16 +208,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2023L"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'March'"
+                                      "Value": "2024L"
                                     }
                                   }
                                 ]
@@ -272,25 +227,12 @@
                                   "Property": "Year"
                                 }
                               }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_a3e0d1af-eb85-43da-b306-07b23c3dd128"
-                                    }
-                                  },
-                                  "Property": "Month"
-                                }
-                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "2023",
-                            "1": "March"
+                            "0": "2024"
                           }
                         ]
                       }
